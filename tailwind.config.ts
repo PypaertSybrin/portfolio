@@ -12,8 +12,11 @@ const config: Config = {
         soleil: ["soleil", "sans-serif"],
       },
       colors: {
-        primary: '#91A7FF'
-      }
+        primary: {
+          light: '#C0D2FF',
+          neutral: '#91A7FF'
+        }
+      },
     },
   },
   plugins: [],
