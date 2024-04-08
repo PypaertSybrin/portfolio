@@ -1,10 +1,10 @@
 import Skill from '@/models/Skill'
 import { SiFlutter } from 'react-icons/si'
+import { LuMonitor, LuSmartphone, LuDatabase } from "react-icons/lu";
 
 export const SkillData: Skill[] = [
   {
-    src: 'test',
-    alt: 'test',
+    icon: LuMonitor,
     name: 'Frontend Development',
     strength: [
       { icon: SiFlutter, name: 'Flutter', color: 'blue' },
@@ -13,9 +13,8 @@ export const SkillData: Skill[] = [
     ],
   },
   {
-    src: 'test',
-    alt: 'test',
-    name: 'Frontend Development',
+    icon: LuDatabase,
+    name: 'Backend Development',
     strength: [
       { icon: SiFlutter, name: 'Flutter', color: 'blue' },
       { icon: SiFlutter, name: 'Flutter', color: 'blue' },
@@ -23,10 +22,10 @@ export const SkillData: Skill[] = [
     ],
   },
   {
-    src: 'test',
-    alt: 'test',
-    name: 'Frontend Development',
+    icon: LuSmartphone,
+    name: 'Mobile Development',
     strength: [
+      { icon: SiFlutter, name: 'Fluttersss', color: 'blue' },
       { icon: SiFlutter, name: 'Flutter', color: 'blue' },
       { icon: SiFlutter, name: 'Flutter', color: 'blue' },
       { icon: SiFlutter, name: 'Flutter', color: 'blue' },

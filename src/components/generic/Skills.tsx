@@ -3,11 +3,11 @@ import SkillCard from "@/components/cards/SkillCard";
 
 const Skills = () => {
     return (
-        <div className="py-12 text-center">
-            <h1 className="text-4xl font-semibold mb-12">Skills</h1>
-            <div className="flex flex-wrap justify-between">
+        <div className="py-12 px-4">
+            <h1 className="text-4xl font-semibold mb-12 text-center">Skills</h1>
+            <div className="grid grid-cols-3 gap-4">
                 {SkillData.map((skill) => (
-                    <div key={skill.name} className="">
+                    <div key={skill.name} className="basis-2/6">
                         <SkillCard skill={skill} />
                     </div>
                 ))}

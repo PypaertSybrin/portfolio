@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Navigation = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 p-4 dark:bg-neutral-900 bg-neutral-50">
+    <nav className="fixed top-0 left-0 right-0 p-4 dark:bg-secundary-950 bg-secundary-50">
       <div className="mx-auto max-w-screen-xl">
         <ul className="text-xl font-semibold flex gap-8 justify-end">
           <li>

@@ -1,8 +1,8 @@
+import { IconType } from "react-icons";
 import Software from "./Software";
 
 interface Skill {
-    src: string;
-    alt: string;
+    icon: IconType;
     name: string;
     strength: Software[];
 }

@@ -13,8 +13,16 @@ const config: Config = {
       },
       colors: {
         primary: {
-          light: '#C0D2FF',
+          light: '#B7C5FF',
           neutral: '#91A7FF'
+        },
+        secundary: {
+          950: '#2D2D2D',
+          900: '#3D3D3D',
+          800: '#4C4C4C',
+
+          100: '#E1E1E1',
+          50: '#F0F0F0'
         }
       },
     },
