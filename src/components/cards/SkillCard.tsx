@@ -8,7 +8,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
             className='w-8 h-8'
           />
       </div>
-      <p className='text-2xl mb-2'>{skill.name}</p>
+      <p className='text-2xl mb-2 font-semibold'>{skill.name}</p>
       <div className='items-start'>
         <p className='py-2'>Strengths</p>
         <ul className='flex flex-wrap gap-2 items-center'>
@@ -17,7 +17,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
               key={s.name}
               className='flex items-center gap-2 bg-secundary-900 p-2 rounded-lg'
             >
-              <s.icon />
+              <s.icon color={s.color}/>
               <span className='text-sm'>{s.name}</span>
             </div>
           ))}
