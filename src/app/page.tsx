@@ -1,13 +1,20 @@
 import Header from "@/components/generic/Header";
 import Navigation from "@/components/generic/Navigation";
-import Image from "next/image";
+import Skills from "@/components/generic/Skills";
 
 export default function Home() {
   return (
-    <div className="min-h-screen dark:bg-neutral-900 dark:text-neutral-50 bg-neutral-50 text-neutral-900">
+    <div className="min-h-screen dark:bg-secundary-950 dark:text-secundary-50 bg-secundary-50 text-secundary-950">
       <Navigation />
-      <main className="max-w-screen-xl mx-auto">
-        <Header />
+      <main>
+        <section id="/" className="max-w-screen-xl mx-auto">
+          <Header />
+        </section>
+        <section id="skills" className="dark:bg-secundary-900">
+          <div className="max-w-screen-xl mx-auto">
+            <Skills />
+          </div>
+        </section>
       </main>
     </div>
   );
