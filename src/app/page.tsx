@@ -1,6 +1,7 @@
 import Header from "@/components/generic/Header";
 import Navigation from "@/components/generic/Navigation";
 import Skills from "@/components/generic/Skills";
+import ProjectsGrid from "@/components/generic/ProjectsGrid";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
           <div className="max-w-screen-xl mx-auto">
             <Skills />
           </div>
+        </section>
+        <section id="projects" className="max-w-screen-xl mx-auto">
+          <ProjectsGrid />
         </section>
       </main>
     </div>

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Navbar from "../nav/Navbar";
-import Sidebar from "../nav/Sidebar";
+import Navbar from "@/components/nav/Navbar";
+import Sidebar from "@/components/nav/Sidebar";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

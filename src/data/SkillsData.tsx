@@ -1,6 +1,5 @@
 import Skill from '@/models/Skill';
 import {
-  SiAzurefunctions,
   SiDotnet,
   SiFirebase,
   SiFlutter,
