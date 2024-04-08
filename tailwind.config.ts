@@ -10,6 +10,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         soleil: ["soleil", "sans-serif"],
+      },
+      colors: {
+        primary: '#91A7FF'
       }
     },
   },
