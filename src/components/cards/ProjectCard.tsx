@@ -3,22 +3,24 @@ import Image from 'next/image'
 
 const ProjectCard = ({
   project,
-  classes,
+  index,
 }: {
   project: Project
-  classes: string
+  index: number
 }) => {
   return (
-    <div className={`flex ${classes} justify-between`}>
-      <div className="w-48 h-32 relative">
+    <div className={`grid ${index === 0 || index === 3 ? 'grid-cols-2': 'grid-cols-2 sm:grid-cols-1'}`}>
+      <div className="relative">
         <Image
           src={`/${project.pictures[0].src}`}
           alt={project.pictures[0].src}
-          fill
-          className='items-center'
+          // width en height moet enkel niet definiëren als je de image importeert via een import statement
+          width={project.pictures[0].width}
+          height={project.pictures[0].height}
+          className="h-full w-full object-cover"
         ></Image>
       </div>
-      <div>
+      <div className="self-start order-first">
         <h3>{project.name}</h3>
         <p>Read more</p>
       </div>

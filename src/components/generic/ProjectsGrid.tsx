@@ -5,42 +5,35 @@ const ProjectsGrid = () => {
   return (
     <div className="py-12 px-4">
       <h1 className="text-4xl font-semibold mb-12 text-center">Projects</h1>
-
-      <div className="flex items-center justify-between gap-8">
-        <div className="w-1/3">
-          <p className="text-2xl font-semibold">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="lg:w-2/5 px-8">
+          <p className="text-4xl font-semibold mb-6 text-primary-neutral">
             A Journey of Learning and Creation{' '}
           </p>
+          <p className='mb-2'>
+            I&apos;m excited to share a glimpse into some of the projects
+            I&apos;ve been involved in.
+          </p>
           <p>
-            I can proudly say that these are a few of my projects I&apos;ve made
-            myself or in a team. It needed hard work en dedication but at the
-            end of the day, I was always happy with the final product.
+            {' '}
+            Whether flying solo or as part of a team, each one required a lot of
+            hard graft and dedication. But you know what? At the end of the day,
+            seeing those finished products gave me a real buzz.
           </p>
         </div>
-        <div className="bento w-2/3 h-full">
+        <div className="bento lg:w-3/5 h-full">
           {ProjectsData.map((project, index) => (
             <div
               key={project.name}
-              className={`h-full w-full p-4 dark:bg-secundary-800 ${
-                index == 0 ? 'row-start-2 col-span-2' : ''
-              } ${index == 1 ? 'row-start-3 row-span-3 col-start-2' : ''} ${
-                index == 2 ? 'row-span-3 col-start-3' : ''
-              } ${index == 3 ? 'row-start-4 col-start-3 col-span-2' : ''}`}
+              className={`p-4 dark:bg-secundary-800 ${
+                index == 0 ? 'xl:row-start-2 xl:col-span-2' : ''
+              } ${index == 1 ? 'xl:row-start-3 xl:row-span-3 xl:col-start-2 sm:row-start-2 sm:row-span-2' : ''} ${
+                index == 2 ? 'xl:row-span-3 xl:col-start-3 sm:col-start-2 sm:row-span-2' : ''
+              } ${index == 3 ? 'xl:row-start-4 xl:col-start-3 xl:col-span-2' : ''}`}
             >
-              <ProjectCard
-                project={project}
-                classes={`${
-                  index === 0 || index === 3
-                    ? 'flex-row-reverse'
-                    : 'flex-col-reverse'
-                }`}
-              />
+              <ProjectCard project={project} index={index} />
             </div>
           ))}
-          {/* <div className="bg-secundary-800 w-auto h-auto row-start-2 col-span-2">test</div>
-            <div className="bg-secundary-800 w-auto h-auto row-start-3 row-span-3 col-start-2">test</div>
-            <div className="bg-secundary-800 w-auto h-auto row-span-3 col-start-3">test</div>
-            <div className="bg-secundary-800 w-auto h-auto row-start-4 col-start-3 col-span-2">test</div> */}
         </div>
       </div>
     </div>

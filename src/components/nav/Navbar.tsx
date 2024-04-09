@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
   return (
-    <nav className="fixed top-0 left-0 right-0 p-2 pb-0 md:p-4 dark:bg-secundary-950 bg-secundary-50">
+    <nav className="fixed top-0 left-0 right-0 p-2 pb-0 md:p-4 dark:bg-secundary-950 bg-secundary-50 z-10">
       <div className="mx-auto max-w-screen-xl">
         <ul className="text-xl font-semibold gap-8 justify-end hidden md:flex">
           <li>
