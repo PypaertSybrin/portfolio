@@ -21,6 +21,7 @@ const config: Config = {
           900: '#3D3D3D',
           800: '#4C4C4C',
 
+          200: '#D2D2D2',
           100: '#E1E1E1',
           50: '#F0F0F0'
         }

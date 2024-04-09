@@ -5,6 +5,7 @@ export const ProjectsData: Project[] = [
     name: 'Project 1',
     subname: 'Subname 1',
     description: 'Description 1',
+    inGrid: true,
     pictures: [
       {
         src: 'TastyTrade.png',
@@ -18,6 +19,7 @@ export const ProjectsData: Project[] = [
     name: 'Project 2',
     subname: 'Subname 2',
     description: 'Description 2',
+    inGrid: true,
     pictures: [
       {
         src: 'TastyTrade.png',
@@ -31,6 +33,7 @@ export const ProjectsData: Project[] = [
     name: 'Project 3',
     subname: 'Subname 2',
     description: 'Description 2',
+    inGrid: true,
     pictures: [
       {
         src: 'TastyTrade.png',
@@ -44,6 +47,7 @@ export const ProjectsData: Project[] = [
     name: 'Project 4',
     subname: 'Subname 2',
     description: 'Description 2',
+    inGrid: true,
     pictures: [
       {
         src: 'TastyTrade.png',
@@ -53,5 +57,6 @@ export const ProjectsData: Project[] = [
       },
     ],
   },
+  
 ]
 export default ProjectsData
