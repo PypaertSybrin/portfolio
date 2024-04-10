@@ -5,6 +5,11 @@ import useEmblaCarousel from 'embla-carousel-react'
 import ClassNames from 'embla-carousel-class-names'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import Project from '@/models/Project'
+import {
+  NextButton,
+  PrevButton,
+  usePrevNextButtons,
+} from './EmblaCarouselArrowButtons'
 import Image from 'next/image'
 
 type PropType = {
@@ -19,12 +24,22 @@ const EmblaCarousel: React.FC<PropType> = props => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi)
 
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi)
+
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-        {slides.map(project => (
-            <div className="embla__slide embla__class-names flex flex-col relative" key={project.name}>
+          {slides.map(project => (
+            <div
+              className="embla__slide embla__class-names flex flex-col relative"
+              key={project.name}
+            >
               <Image
                 src={`/${project.pictures[0].src}`}
                 alt={project.name}
@@ -40,6 +55,10 @@ const EmblaCarousel: React.FC<PropType> = props => {
       </div>
 
       <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
