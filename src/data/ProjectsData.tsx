@@ -2,57 +2,85 @@ import Project from '@/models/Project'
 
 export const ProjectsData: Project[] = [
   {
-    name: 'Project 1',
-    subname: 'Subname 1',
+    name: 'Target Goal',
+    subname: 'Project one',
     description: 'Description 1',
     inGrid: true,
     pictures: [
       {
-        src: 'TastyTrade.png',
-        alt: 'Alt 1',
-        width: 1280,
+        src: 'TargetGoal.png',
+        alt: 'TargetGoal',
+        width: 1200,
         height: 900,
       },
     ],
   },
   {
-    name: 'Project 2',
-    subname: 'Subname 2',
+    name: 'TastyTrade',
+    subname: 'Smart App Development',
     description: 'Description 2',
     inGrid: true,
     pictures: [
       {
         src: 'TastyTrade.png',
-        alt: 'Alt 2',
-        width: 1280,
+        alt: 'TastyTrade',
+        width: 1200,
         height: 900,
       },
     ],
   },
   {
-    name: 'Project 3',
-    subname: 'Subname 2',
+    name: 'Bike Blitz',
+    subname: 'Team Project',
     description: 'Description 2',
     inGrid: true,
     pictures: [
       {
-        src: 'TastyTrade.png',
-        alt: 'Alt 2',
-        width: 1280,
+        src: 'BikeBlitz.png',
+        alt: 'BikeBlitz',
+        width: 1200,
         height: 900,
       },
     ],
   },
   {
-    name: 'Project 4',
-    subname: 'Subname 2',
+    name: 'Free Game Galaxy',
+    subname: 'Interaction Design',
     description: 'Description 2',
     inGrid: true,
     pictures: [
       {
-        src: 'TastyTrade.png',
-        alt: 'Alt 2',
-        width: 1280,
+        src: 'FreeGameGalaxy.png',
+        alt: 'Free Game Galaxy',
+        width: 1200,
+        height: 800,
+      },
+    ],
+  },
+  {
+    name: 'LightSwitch',
+    subname: 'Full Stack Development',
+    description: 'Description 2',
+    inGrid: false,
+    pictures: [
+      {
+        src: 'LightSwitch.png',
+        alt: 'LightSwitch',
+        width: 1200,
+        height: 900,
+      },
+    ],
+  },
+  {
+    name: 'Formula1 Api',
+    subname: 'Backend Development',
+    description: 'Description 2',
+    inGrid: false,
+    pictures: [
+      {
+        src: 'Backend.png',
+        alt: 'Backend',
+        width: 1200,
         height: 900,
       },
     ],

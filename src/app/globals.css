@@ -29,18 +29,12 @@
             grid-template-rows: repeat(3, 1fr);
         }
     }
-    @media (min-width: 1280px){
-        .bento{
-            grid-template-columns: 2rem 1fr 1fr 2rem;
-            grid-template-rows: 1rem auto auto auto 1rem;
-        }
-    }
     .embla {
         max-width: 48rem;
         margin: auto;
         --slide-height: 19rem;
         --slide-spacing: 1rem;
-        --slide-size: 50%;
+        --slide-size: 60%;
       }
       .embla__viewport {
         overflow: hidden;
@@ -57,7 +51,6 @@
         padding-left: var(--slide-spacing);
       }
       .embla__slide__img {
-        border-radius: 1.8rem;
         display: block;
         height: var(--slide-height);
         width: 100%;
@@ -67,8 +60,8 @@
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
-        gap: 1.2rem;
-        margin-top: 1.8rem;
+        gap: 1rem;
+        margin-top: 1rem;
       }
       .embla__dots {
         display: flex;
@@ -88,8 +81,8 @@
         border: 0;
         padding: 0;
         margin: 0;
-        width: 2.6rem;
-        height: 2.6rem;
+        width: 2rem;
+        height: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
