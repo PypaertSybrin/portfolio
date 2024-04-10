@@ -53,7 +53,7 @@ export const ProjectsData: Project[] = [
         src: 'FreeGameGalaxy.png',
         alt: 'Free Game Galaxy',
         width: 1200,
-        height: 800,
+        height: 900,
       },
     ],
   },
