@@ -30,13 +30,13 @@
         }
     }
     .embla {
-        max-width: 48rem;
+        max-width: 64rem;
         margin: auto;
         --slide-height: 19rem;
         --slide-spacing: 1rem;
         --slide-size: 100%;
         @media (min-width: 640px){
-            --slide-size: 60%;
+            --slide-size: 50%;
         }
       }
       .embla__viewport {

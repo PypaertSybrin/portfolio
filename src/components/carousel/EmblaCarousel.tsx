@@ -40,13 +40,18 @@ const EmblaCarousel: React.FC<PropType> = props => {
               className="embla__slide embla__class-names flex flex-col relative"
               key={project.name}
             >
-              <Image
-                src={`/${project.pictures[0].src}`}
-                alt={project.name}
-                width={project.pictures[0].width}
-                height={project.pictures[0].height}
-                className="object-cover h-full w-full"
-              ></Image>
+              <div className='relative'>
+                <Image
+                  src={`/${project.pictures[0].src}`}
+                  alt={project.name}
+                  width={project.pictures[0].width}
+                  height={project.pictures[0].height}
+                  className="object-cover h-full w-full"
+                ></Image>
+                <div className="font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black opacity-0 hover:opacity-90 transition duration-300">
+                  Read more
+                </div>
+              </div>
               <h3>{project.name}</h3>
               <p>{project.subname}</p>
             </div>
