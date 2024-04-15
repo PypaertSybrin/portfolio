@@ -38,6 +38,11 @@ const Sidebar = ({
             </Link>
           </li>
           <li>
+            <Link href="#about" onClick={toggle}>
+              <p>About me</p>
+            </Link>
+          </li>
+          <li>
             <Link href="#skills" onClick={toggle}>
               <p>Skills</p>
             </Link>
@@ -45,11 +50,6 @@ const Sidebar = ({
           <li>
             <Link href="#projects" onClick={toggle}>
               <p>Projects</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="#about" onClick={toggle}>
-              <p>About me</p>
             </Link>
           </li>
           <li>

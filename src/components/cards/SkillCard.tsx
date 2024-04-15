@@ -2,8 +2,8 @@ import Skill from '@/models/Skill'
 
 const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
-    <div className='p-8 dark:bg-secundary-800 bg-secundary-200 h-full'>
-      <div className='w-min dark:bg-secundary-900 bg-secundary-100 p-6 mb-12 rounded-full text-primary-neutral'>
+    <div className='p-8 dark:bg-secundary-900 bg-secundary-200 h-full'>
+      <div className='w-min dark:bg-secundary-950 bg-secundary-100 p-6 mb-12 rounded-full text-primary-neutral'>
           <skill.icon
             className='w-8 h-8'
           />
@@ -15,7 +15,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
           {skill.strength.map(s => (
             <div
               key={s.name}
-              className='flex items-center gap-2 dark:bg-secundary-900 bg-secundary-100 p-2 rounded-lg'
+              className='flex items-center gap-2 dark:bg-secundary-950 bg-secundary-100 p-2 rounded-lg'
             >
               <s.icon color={s.color}/>
               <span className='text-sm'>{s.name}</span>

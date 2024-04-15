@@ -25,7 +25,7 @@ const ProjectsGrid = () => {
           {ProjectsData.filter(project => project.inGrid).map((project, index) => (
             <div
               key={project.name}
-              className={`p-4 dark:bg-secundary-800 bg-secundary-100 ${
+              className={`p-4 dark:bg-secundary-900 bg-secundary-100 ${
                 index === 0 ? '' : ''
               } ${index === 1 ? 'sm:row-start-2 sm:row-span-2' : ''} ${
                 index === 2 ? 'sm:col-start-2 sm:row-span-2' : ''
