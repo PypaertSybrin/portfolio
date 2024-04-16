@@ -35,12 +35,12 @@ const EmblaCarousel: React.FC<PropType> = props => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map(project => (
+          {slides.map((project, index) => (
             <div
               className="embla__slide embla__class-names flex flex-col relative"
               key={project.name}
             >
-              <div className='relative'>
+              <div className="relative">
                 <Image
                   src={`/${project.pictures[0].src}`}
                   alt={project.name}
@@ -48,8 +48,8 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   height={project.pictures[0].height}
                   className="object-cover h-full w-full"
                 ></Image>
-                <div className="font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black opacity-0 hover:opacity-90 transition duration-300">
-                  Read more
+                <div className={`font-semibold text-lg absolute inset-0 hover:opacity-70 opacity-0 flex flex-col justify-center text-center bg-black transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
+                  <p className="text-2xl">Read more</p>
                 </div>
               </div>
               <h3>{project.name}</h3>
