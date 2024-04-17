@@ -36,22 +36,22 @@ const Sidebar = ({
             </Link>
           </li>
           <li>
-            <Link href="#about" onClick={toggle}>
+            <Link href="/#about" onClick={toggle}>
               <p>About me</p>
             </Link>
           </li>
           <li>
-            <Link href="#skills" onClick={toggle}>
+            <Link href="/#skills" onClick={toggle}>
               <p>Skills</p>
             </Link>
           </li>
           <li>
-            <Link href="#projects" onClick={toggle}>
+            <Link href="/#projects" onClick={toggle}>
               <p>Projects</p>
             </Link>
           </li>
           <li>
-            <Link href="#contact" onClick={toggle}>
+            <Link href="/#contact" onClick={toggle}>
               <p>Contact</p>
             </Link>
           </li>

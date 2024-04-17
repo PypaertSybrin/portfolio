@@ -1,5 +1,7 @@
+'use client'
 import Project from '@/models/Project'
 import Image from 'next/image'
+import {useRouter} from 'next/navigation'
 
 const ProjectCard = ({
   project,
@@ -8,6 +10,10 @@ const ProjectCard = ({
   project: Project
   index: number
 }) => {
+  const router = useRouter();
+  const handleClick = (slug: string) => () => {
+    router.push(`/projects/${slug}`);
+  }
   return (
     <div className="relative h-full">
       <div
@@ -20,7 +26,7 @@ const ProjectCard = ({
         <div className="relative">
           <Image
             src={`/${project.pictures[0].src}`}
-            alt={project.pictures[0].src}
+            alt={project.pictures[0].alt}
             // width en height moet enkel niet definiëren als je de image importeert via een import statement
             width={project.pictures[0].width}
             height={project.pictures[0].height}
@@ -33,7 +39,7 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300">
-        <p className='text-xl'>Read more</p>
+      <button onClick={handleClick(project.slug)} className="text-2xl">Read more</button >
       </div>
     </div>
   )

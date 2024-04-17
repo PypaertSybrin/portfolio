@@ -9,16 +9,16 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean, toggle: () => void }) => 
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="#about">About me</Link>
+            <Link href="/#about">About me</Link>
           </li>
           <li>
-            <Link href="#skills">Skills</Link>
+            <Link href="/#skills">Skills</Link>
           </li>
           <li>
-            <Link href="#projects">Projects</Link>
+            <Link href="/#projects">Projects</Link>
           </li>
           <li>
-            <Link href="#contact">Contact</Link>
+            <Link href="/#contact">Contact</Link>
           </li>
         </ul>
       </div>

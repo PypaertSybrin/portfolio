@@ -49,7 +49,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
               <div className="relative">
                 <Image
                   src={`/${project.pictures[0].src}`}
-                  alt={project.name}
+                  alt={project.pictures[0].alt}
                   width={project.pictures[0].width}
                   height={project.pictures[0].height}
                   className="object-cover h-full w-full"

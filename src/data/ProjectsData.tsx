@@ -14,6 +14,12 @@ export const ProjectsData: Project[] = [
         width: 1200,
         height: 900,
       },
+      {
+        src: 'TargetGoal.png',
+        alt: 'TargetGoal',
+        width: 1200,
+        height: 900,
+      },
     ],
   },
   {

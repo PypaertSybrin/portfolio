@@ -5,6 +5,7 @@ import ProjectsGrid from '@/components/generic/ProjectsGrid'
 import ProjectsSlider from '@/components/generic/ProjectsSlider'
 import About from '@/components/generic/About'
 import Contact from '@/components/generic/Contact'
+import Footer from '@/components/generic/Footer'
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
         <section id="/" className="max-w-screen-xl mx-auto">
           <Header />
         </section>
-        <section id="about"className="max-w-screen-xl mx-auto">
-            <About />
+        <section id="about" className="max-w-screen-xl mx-auto">
+          <About />
         </section>
         <section id="skills" className="">
           <div className="max-w-screen-xl mx-auto">
@@ -29,6 +30,7 @@ export default function Home() {
         <section id="contact" className="max-w-screen-xl mx-auto">
           <Contact />
         </section>
+        <Footer />
       </main>
     </div>
   )
