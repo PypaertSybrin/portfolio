@@ -18,13 +18,13 @@ const config: Config = {
           neutral: '#91A7FF'
         },
         secundary: {
-          950: '#2D2D2D',
-          900: '#3D3D3D',
-          800: '#4C4C4C',
+          950: '#1F1F1F',
+          900: '#2F2F2F',
+          800: '#3F3F3F',
 
-          200: '#D2D2D2',
-          100: '#E1E1E1',
-          50: '#F0F0F0'
+          200: '#CFCFCF',
+          100: '#DFDFDF',
+          50: '#EFEFEF'
         }
       },
     },

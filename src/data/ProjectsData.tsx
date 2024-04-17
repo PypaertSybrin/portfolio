@@ -3,6 +3,7 @@ import Project from '@/models/Project'
 export const ProjectsData: Project[] = [
   {
     name: 'Target Goal',
+    slug: 'target-goal',
     subname: 'Project one',
     description: 'Description 1',
     inGrid: true,
@@ -17,6 +18,7 @@ export const ProjectsData: Project[] = [
   },
   {
     name: 'TastyTrade',
+    slug: 'tasty-trade',
     subname: 'Smart App Development',
     description: 'Description 2',
     inGrid: true,
@@ -31,6 +33,7 @@ export const ProjectsData: Project[] = [
   },
   {
     name: 'Bike Blitz',
+    slug: 'bike-blitz',
     subname: 'Team Project',
     description: 'Description 2',
     inGrid: true,
@@ -45,6 +48,7 @@ export const ProjectsData: Project[] = [
   },
   {
     name: 'Free Game Galaxy',
+    slug: 'free-game-galaxy',
     subname: 'Interaction Design',
     description: 'Description 2',
     inGrid: true,
@@ -59,6 +63,7 @@ export const ProjectsData: Project[] = [
   },
   {
     name: 'LightSwitch',
+    slug: 'light-switch',
     subname: 'Full Stack Development',
     description: 'Description 2',
     inGrid: false,
@@ -73,6 +78,7 @@ export const ProjectsData: Project[] = [
   },
   {
     name: 'Formula1 Api',
+    slug: 'formula1-api',
     subname: 'Backend Development',
     description: 'Description 2',
     inGrid: false,

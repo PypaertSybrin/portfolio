@@ -11,6 +11,7 @@ import {
   usePrevNextButtons,
 } from './EmblaCarouselArrowButtons'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 
 type PropType = {
   slides: Project[]
@@ -18,6 +19,7 @@ type PropType = {
 }
 
 const EmblaCarousel: React.FC<PropType> = props => {
+  const router = useRouter();
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [ClassNames()])
 
@@ -30,6 +32,10 @@ const EmblaCarousel: React.FC<PropType> = props => {
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi)
+
+  const handleClick = (slug: string) => () => {
+    router.push(`/projects/${slug}`);
+  }
 
   return (
     <div className="embla">
@@ -48,8 +54,8 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   height={project.pictures[0].height}
                   className="object-cover h-full w-full"
                 ></Image>
-                <div className={`font-semibold text-lg absolute inset-0 hover:opacity-70 opacity-0 flex flex-col justify-center text-center bg-black transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
-                  <p className="text-2xl">Read more</p>
+                <div className={`font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
+                  <button onClick={handleClick(project.slug)} className="text-2xl">Read more</button >
                 </div>
               </div>
               <h3>{project.name}</h3>

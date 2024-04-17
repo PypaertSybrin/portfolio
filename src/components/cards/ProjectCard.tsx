@@ -32,7 +32,7 @@ const ProjectCard = ({
           <p className="text-secundary-200">{project.subname}</p>
         </div>
       </div>
-      <div className="font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black opacity-0 hover:opacity-70 transition duration-300">
+      <div className="font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300">
         <p className='text-xl'>Read more</p>
       </div>
     </div>
