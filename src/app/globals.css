@@ -147,7 +147,7 @@
       }
       /* Embla Project Detail */
       .embla-detail{
-        max-width: 36rem;
+        width: auto;
         margin: auto;
         --slide-height: 19rem;
         --slide-size: 100%;

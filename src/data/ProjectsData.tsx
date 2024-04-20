@@ -5,7 +5,7 @@ export const ProjectsData: Project[] = [
     name: 'Target Goal',
     slug: 'target-goal',
     subname: 'Project one',
-    description: 'Description 1',
+    description: 'This was one of my first projects. I learned a lot from it. There were a lot of challenges, but I managed to overcome them. I am proud of the result.',
     inGrid: true,
     pictures: [
       {
