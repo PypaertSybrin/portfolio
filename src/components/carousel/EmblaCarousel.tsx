@@ -58,8 +58,8 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   <button onClick={handleClick(project.slug)} className="text-2xl">Read more</button >
                 </div>
               </div>
-              <h3>{project.name}</h3>
-              <p>{project.subname}</p>
+              <h3 className='text-xl font-semibold'>{project.name}</h3>
+              <p className='text-secundary-800'>{project.subname}</p>
             </div>
           ))}
         </div>

@@ -8,7 +8,7 @@ import EmblaCarouselProjectDetails from '@/components/carousel/EmblaCarouselProj
 const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
   const project: Project | undefined = ProjectsData.find(
     (project: Project) => project.slug === params.projectSlug,
-  )
+  ) 
 
   const OPTIONS: EmblaOptionsType = {}
   const SLIDES = project?.pictures || []
