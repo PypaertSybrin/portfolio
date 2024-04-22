@@ -11,7 +11,7 @@ const Contact = () => {
       <p className='mb-4'>Feel free to reach out to me</p>
       <div className="flex justify-center gap-6">
         <Link href="mailto:sybrinpypaert@gmail.com">
-          <div className="bg-secundary-900 p-4">
+          <div className="bg-secundary-900 p-4 rounded-xl">
             <LuMail className="w-8 h-8" />
           </div>
         </Link>
@@ -19,12 +19,12 @@ const Contact = () => {
           href="https://www.linkedin.com/in/sybrin-pypaert-a2413b298/"
           target="_blank"
         >
-          <div className="bg-secundary-900 p-4">
+          <div className="bg-secundary-900 p-4 rounded-xl">
             <SiLinkedin className="w-8 h-8" />
           </div>
         </Link>
         <Link href="https://github.com/PypaertSybrin" target="_blank">
-          <div className="bg-secundary-900 p-4">
+          <div className="bg-secundary-900 p-4 rounded-xl">
             <SiGithub className="w-8 h-8" />
           </div>
         </Link>

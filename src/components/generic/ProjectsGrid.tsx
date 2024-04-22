@@ -28,7 +28,7 @@ const ProjectsGrid = () => {
             (project, index) => (
               <div
                 key={project.name}
-                className={`dark:bg-secundary-900 bg-secundary-100 ${
+                className={`dark:bg-secundary-900 bg-secundary-100 rounded-xl ${
                   index === 0 ? '' : ''
                 } ${index === 1 ? 'sm:row-start-2 sm:row-span-2' : ''} ${
                   index === 2 ? 'sm:col-start-2 sm:row-span-2' : ''

@@ -1,7 +1,6 @@
-'use client'
 import Project from '@/models/Project'
 import Image from 'next/image'
-import {useRouter} from 'next/navigation'
+import Link from 'next/link'
 
 const ProjectCard = ({
   project,
@@ -10,10 +9,6 @@ const ProjectCard = ({
   project: Project
   index: number
 }) => {
-  const router = useRouter();
-  const handleClick = (slug: string) => () => {
-    router.push(`/projects/${slug}`);
-  }
   return (
     <div className="relative h-full">
       <div
@@ -30,7 +25,7 @@ const ProjectCard = ({
             // width en height moet enkel niet definiëren als je de image importeert via een import statement
             width={project.pictures[0].width}
             height={project.pictures[0].height}
-            className="object-cover h-full w-full"
+            className="object-cover h-full w-full rounded-xl"
           ></Image>
         </div>
         <div className="self-start order-first">
@@ -38,8 +33,8 @@ const ProjectCard = ({
           <p className="text-secundary-200">{project.subname}</p>
         </div>
       </div>
-      <div className="font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300">
-      <button onClick={handleClick(project.slug)} className="text-2xl">Read more</button >
+      <div className="font-semibold rounded-xl text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300">
+      <Link href={`/projects/${project.slug}`} className="text-2xl">Read more</Link >
       </div>
     </div>
   )

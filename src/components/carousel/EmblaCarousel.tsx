@@ -52,14 +52,14 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   alt={project.pictures[0].alt}
                   width={project.pictures[0].width}
                   height={project.pictures[0].height}
-                  className="object-cover h-full w-full"
+                  className="object-cover h-full w-full rounded-xl"
                 ></Image>
-                <div className={`font-semibold text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
+                <div className={`font-semibold rounded-xl text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
                   <button onClick={handleClick(project.slug)} className="text-2xl">Read more</button >
                 </div>
               </div>
-              <h3 className='text-xl font-semibold'>{project.name}</h3>
-              <p className='text-secundary-800'>{project.subname}</p>
+              <h3 className='text-2xl font-semibold'>{project.name}</h3>
+              <p className='text-secundary-800 font-semibold'>{project.subname}</p>
             </div>
           ))}
         </div>
