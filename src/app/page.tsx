@@ -1,7 +1,37 @@
-import Image from "next/image";
+import Header from '@/components/generic/Header'
+import Navigation from '@/components/generic/Navigation'
+import Skills from '@/components/generic/Skills'
+import ProjectsGrid from '@/components/generic/ProjectsGrid'
+import ProjectsSlider from '@/components/generic/ProjectsSlider'
+import About from '@/components/generic/About'
+import Contact from '@/components/generic/Contact'
+import Footer from '@/components/generic/Footer'
 
 export default function Home() {
   return (
-    <p className="text-red-400 font-soleil">Testing</p>
-  );
+    <div className="min-h-screen dark:bg-secundary-950 dark:text-secundary-50 bg-secundary-50 text-secundary-950">
+      <Navigation />
+      <main>
+        <section id="/" className="max-w-screen-xl mx-auto">
+          <Header />
+        </section>
+        <section id="about" className="max-w-screen-xl mx-auto">
+          <About />
+        </section>
+        <section id="skills" className="">
+          <div className="max-w-screen-xl mx-auto">
+            <Skills />
+          </div>
+        </section>
+        <section id="projects" className="max-w-screen-xl mx-auto">
+          <ProjectsGrid />
+          <ProjectsSlider />
+        </section>
+        <section id="contact" className="max-w-screen-xl mx-auto">
+          <Contact />
+        </section>
+        <Footer />
+      </main>
+    </div>
+  )
 }
