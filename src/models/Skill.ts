@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import Software from "./Software";
+import Software from "@/models/Software";
 
 interface Skill {
     icon: IconType;

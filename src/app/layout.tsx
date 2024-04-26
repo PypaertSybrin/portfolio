@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +16,9 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/fdw2oji.css"></link>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className="font-soleil">
+        {children}
+      </body>
     </html>
   );
 }

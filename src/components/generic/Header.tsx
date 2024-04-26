@@ -3,8 +3,8 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const Header = () => {
     return (
-        <div className="h-screen flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-around lg:gap-16">
-            <div className="p-8 text-center lg:text-left">
+        <div className="h-screen flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between lg:gap-16">
+            <div className="p-8 text-center lg:text-left text-lg">
                 <p className="lg:text-xl py-1 lg:py-2">Sybrin Pypaert</p>
                 <h1 className="lg:text-5xl font-bold text-primary-neutral py-1 lg:py-2">Junior Full Stack Developer</h1>
                 <p className="lg:text-xl py-1 lg:py-2">I&apos;m currently studying <Link className="text-primary-light underline" href={'https://mct.be/'} target="_blank">MCT</Link> or Multimedia &amp; Creative Technology at <Link className="text-primary-light underline" href={'https://www.howest.be/nl'} target="_blank">Howest</Link> in Belgium.</p>

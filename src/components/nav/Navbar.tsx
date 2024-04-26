@@ -1,30 +1,30 @@
 import Link from 'next/link'
 
-const Navbar = ({ toggle }: { toggle: () => void }) => {
+const Navbar = ({ isOpen, toggle }: { isOpen: boolean, toggle: () => void }) => {
   return (
-    <nav className="fixed top-0 left-0 right-0 p-2 pb-0 md:p-4 dark:bg-secundary-950 bg-secundary-50">
+    <nav className={`${isOpen ? 'hidden' : ''}fixed top-0 left-0 right-0 p-2 pb-0 md:p-4 dark:bg-secundary-950 bg-secundary-50 z-10`}>
       <div className="mx-auto max-w-screen-xl">
         <ul className="text-xl font-semibold gap-8 justify-end hidden md:flex">
           <li>
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="#skills">Skills</Link>
+            <Link href="/#about">About me</Link>
           </li>
           <li>
-            <Link href="#projects">Projects</Link>
+            <Link href="/#skills">Skills</Link>
           </li>
           <li>
-            <Link href="#about">About me</Link>
+            <Link href="/#projects">Projects</Link>
           </li>
           <li>
-            <Link href="#contact">Contact</Link>
+            <Link href="/#contact">Contact</Link>
           </li>
         </ul>
       </div>
       <button
         type="button"
-        className="md:hidden"
+        className="md:hidden right-0"
         onClick={toggle}
       >
         {/* Menu icon */}

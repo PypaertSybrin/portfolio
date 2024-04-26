@@ -10,11 +10,9 @@ const Sidebar = ({
   return (
     <>
       <div
-        className="fixed w-full h-full overflow-hidden justify-center dark:bg-secundary-950 bg-secundary-50 grid pt-[120px] left-0 z-10"
-        style={{
-          opacity: `${isOpen ? '1' : '0'}`,
-          top: ` ${isOpen ? '0' : '-100%'}`,
-        }}
+        className={`${
+          isOpen ? 'opacity-100 top-0' : 'opacity-0 top-[-100%]'
+        } fixed w-full h-full overflow-hidden justify-center dark:bg-secundary-950 bg-secundary-50 grid pt-[120px] left-0 z-10`}
       >
         <button className="absolute right-0 p-5" onClick={toggle}>
           {/* Close icon */}
@@ -38,22 +36,22 @@ const Sidebar = ({
             </Link>
           </li>
           <li>
-            <Link href="#skills" onClick={toggle}>
-              <p>Skills</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="#projects" onClick={toggle}>
-              <p>Projects</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="#about" onClick={toggle}>
+            <Link href="/#about" onClick={toggle}>
               <p>About me</p>
             </Link>
           </li>
           <li>
-            <Link href="#contact" onClick={toggle}>
+            <Link href="/#skills" onClick={toggle}>
+              <p>Skills</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#projects" onClick={toggle}>
+              <p>Projects</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#contact" onClick={toggle}>
               <p>Contact</p>
             </Link>
           </li>
