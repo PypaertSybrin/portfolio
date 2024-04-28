@@ -25,7 +25,7 @@ const ProjectCard = ({
             height={project.pictures[0].height}
             src={`docs/${project.pictures[0].src}`}
             alt={project.pictures[0].alt}
-            className="rounded-xl"
+            className="rounded-xl h-full w-full object-cover"
           />
         </div>
         <div className="self-start order-first">

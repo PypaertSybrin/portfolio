@@ -29,7 +29,6 @@ export const Thumb: React.FC<PropType> = props => {
           width={projectPicture.width}
           height={projectPicture.height}
           className='object-cover h-full w-full rounded-xl'
-          key={projectPicture.src}
         />
       </button>
     </div>

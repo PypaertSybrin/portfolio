@@ -1,7 +1,6 @@
 import ProjectPicture from "@/models/ProjectPicture";
 
 interface Project {
-    image: CloudinaryImage;
     name: string;
     slug: string;
     subname: string;

@@ -8,7 +8,7 @@ const ProjectsGrid = () => {
         Projects
       </h1>
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-        <div className="lg:w-2/5 px-8">
+        <div className="lg:w-2/5 px-8 text-center lg:text-left">
           <p className="text-2xl lg:text-4xl font-semibold mb-6 text-primary-neutral">
             A Journey of Learning and Creation{' '}
           </p>

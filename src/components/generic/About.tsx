@@ -10,22 +10,16 @@ const About = () => {
         </div>
         <div className="p-8 flex flex-col gap-4 lg:w-full">
           <div className="bg-secundary-900 p-4 rounded-xl">
-            <h2 className="text-2xl font-semibold">Eager to learn</h2>
-            <p>mqsj ljfjqfk jkqlsmfjlqmsj flm qjsf jqs fjmk qmlsj flkmjqqsj fmlkj qslmfjlqmsj flmqj s </p>
+            <h2 className="text-2xl font-semibold text-primary-neutral">Sports</h2>
+            <p>I love doing sports and keeping myself fit and healthy. I&apos;ve played football for most of my life, but now I often go for a run to stay fit.</p>
           </div>
           <div className="bg-secundary-900 p-4 rounded-xl">
-            <h1 className="text-2xl font-semibold">Eager to learn</h1>
-            <p>
-              mqsj ljfjqfk jkqlsmfjlqmsj flm qjsf jqs fjmk qmlsj flkmjq lfkjq
-              mfjlqm jflmkjqs lmfjq sfqslj flqmjfk kqslmfj mj{' '}
-            </p>
+            <h2 className="text-2xl font-semibold text-primary-neutral">Eager to learn</h2>
+            <p>I love learning new things especially when it comes to technology and programming. I am always looking for new challenges and ways to improve my skills.</p>
           </div>
           <div className="bg-secundary-900 p-4 rounded-xl">
-            <h1 className="text-2xl font-semibold">Eager to learn</h1>
-            <p>
-              mqsj ljfjqfk jkqlsmfjlqmsj flm qjsf jqs fjmk qmlsj flkmjq lfkjq
-              mfjlqm jflmkjqs lmfjq sfqslj flqmjfk kqslmfj mj{' '}
-            </p>
+            <h2 className="text-2xl font-semibold text-primary-neutral">Collaborative</h2>
+            <p>I am a team player and I love working with others because I can learn a lot from them and they from me.</p>
           </div>
         </div>
       </div>

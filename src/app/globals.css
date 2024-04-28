@@ -31,7 +31,7 @@
     }
     /* Embla Project Main Page */
     .embla {
-        max-width: 64rem;
+        max-width: auto;
         margin: auto;
         --slide-height: 19rem;
         --slide-spacing: 1rem;

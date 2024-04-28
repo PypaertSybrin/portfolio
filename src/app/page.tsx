@@ -11,23 +11,21 @@ export default function Home() {
   return (
     <div className="min-h-screen dark:bg-secundary-950 dark:text-secundary-50 bg-secundary-50 text-secundary-950">
       <Navigation />
-      <main>
-        <section id="/" className="max-w-screen-xl mx-auto">
+      <main className='max-w-screen-xl mx-auto'>
+        <section id="/">
           <Header />
         </section>
-        <section id="about" className="max-w-screen-xl mx-auto">
+        <section id="about">
           <About />
         </section>
-        <section id="skills" className="">
-          <div className="max-w-screen-xl mx-auto">
+        <section id="skills">
             <Skills />
-          </div>
         </section>
-        <section id="projects" className="max-w-screen-xl mx-auto">
+        <section id="projects">
           <ProjectsGrid />
           <ProjectsSlider />
         </section>
-        <section id="contact" className="max-w-screen-xl mx-auto">
+        <section id="contact">
           <Contact />
         </section>
         <Footer />
