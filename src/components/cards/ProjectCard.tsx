@@ -1,5 +1,6 @@
+'use client'
 import Project from '@/models/Project'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary';
 import Link from 'next/link'
 
 const ProjectCard = ({
@@ -19,14 +20,13 @@ const ProjectCard = ({
         }`}
       >
         <div className="relative">
-          <Image
-            src={`/${project.pictures[0].src}`}
-            alt={project.pictures[0].alt}
-            // width en height moet enkel niet definiëren als je de image importeert via een import statement
+          <CldImage
             width={project.pictures[0].width}
             height={project.pictures[0].height}
-            className="object-cover h-full w-full rounded-xl"
-          ></Image>
+            src={`docs/${project.pictures[0].src}`}
+            alt={project.pictures[0].alt}
+            className="rounded-xl"
+          />
         </div>
         <div className="self-start order-first">
           <h3 className="text-lg font-semibold">{project.name}</h3>

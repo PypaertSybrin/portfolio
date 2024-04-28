@@ -4,7 +4,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Thumb } from './EmblaCarouselThumbsButton'
 import ProjectPicture from '@/models/ProjectPicture'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 type PropType = {
   slides: ProjectPicture[]
@@ -46,14 +46,14 @@ const EmblaCarouselProjectDetails: React.FC<PropType> = props => {
       <div className="embla__viewport" ref={emblaMainRef}>
         <div className="embla__container-detail">
           {slides.map(project => (
-            <Image
-              src={`/${project.src}`}
+            <CldImage
+              src={`docs/${project.src}`}
               alt={project.alt}
               width={project.width}
               height={project.height}
                 className="object-cover h-full w-full rounded-xl"
               key={project.src}
-            ></Image>
+            />
           ))}
         </div>
       </div>

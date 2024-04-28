@@ -12,6 +12,7 @@ import {
 } from './EmblaCarouselArrowButtons'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
+import { CldImage } from 'next-cloudinary'
 
 type PropType = {
   slides: Project[]
@@ -47,13 +48,13 @@ const EmblaCarousel: React.FC<PropType> = props => {
               key={project.name}
             >
               <div className="relative">
-                <Image
-                  src={`/${project.pictures[0].src}`}
+                <CldImage
+                  src={`docs/${project.pictures[0].src}`}
                   alt={project.pictures[0].alt}
                   width={project.pictures[0].width}
                   height={project.pictures[0].height}
                   className="object-cover h-full w-full rounded-xl"
-                ></Image>
+                />
                 <div className={`font-semibold rounded-xl text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
                   <button onClick={handleClick(project.slug)} className="text-2xl">Read more</button >
                 </div>

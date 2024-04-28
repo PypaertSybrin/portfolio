@@ -1,7 +1,7 @@
 import Project from '@/models/Project'
-import React from 'react'
-import Image from 'next/image'
+import React from 'react' 
 import ProjectPicture from '@/models/ProjectPicture'
+import { CldImage } from 'next-cloudinary'
 
 type PropType = {
   selected: boolean
@@ -23,14 +23,14 @@ export const Thumb: React.FC<PropType> = props => {
         type="button"
         className="embla-thumbs__slide__number"
       >
-        <Image
-          src={`/${projectPicture.src}`}
+        <CldImage
+          src={`docs/${projectPicture.src}`}
           alt={projectPicture.alt}
           width={projectPicture.width}
           height={projectPicture.height}
           className='object-cover h-full w-full rounded-xl'
           key={projectPicture.src}
-        ></Image>
+        />
       </button>
     </div>
   )
