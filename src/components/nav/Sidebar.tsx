@@ -3,10 +3,18 @@ import Link from 'next/link'
 const Sidebar = ({
   isOpen,
   toggle,
+  active
 }: {
   isOpen: boolean
-  toggle: () => void
-}): JSX.Element => {
+  toggle: () => void,
+  active: number
+}) => {
+  const activeClass = (index: number) => {
+    if (active === index) {
+      return 'text-primary-neutral'
+    }
+    return ''
+  }
   return (
     <>
       <div
@@ -31,27 +39,27 @@ const Sidebar = ({
 
         <ul className="text-center text-xl">
           <li>
-            <Link href="/" onClick={toggle}>
+            <Link className={`${activeClass(0)}`} href="/" onClick={toggle}>
               <p>Home</p>
             </Link>
           </li>
           <li>
-            <Link href="/#about" onClick={toggle}>
+            <Link className={`${activeClass(1)}`} href="/#about" onClick={toggle}>
               <p>About me</p>
             </Link>
           </li>
           <li>
-            <Link href="/#skills" onClick={toggle}>
+            <Link className={`${activeClass(2)}`} href="/#skills" onClick={toggle}>
               <p>Skills</p>
             </Link>
           </li>
           <li>
-            <Link href="/#projects" onClick={toggle}>
+            <Link className={`${activeClass(3)}`} href="/#projects" onClick={toggle}>
               <p>Projects</p>
             </Link>
           </li>
           <li>
-            <Link href="/#contact" onClick={toggle}>
+            <Link className={`${activeClass(4)}`} href="/#contact" onClick={toggle}>
               <p>Contact</p>
             </Link>
           </li>
