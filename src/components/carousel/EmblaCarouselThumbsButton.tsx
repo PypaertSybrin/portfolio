@@ -1,4 +1,3 @@
-import Project from '@/models/Project'
 import React from 'react' 
 import ProjectPicture from '@/models/ProjectPicture'
 import { CldImage } from 'next-cloudinary'
@@ -28,7 +27,8 @@ export const Thumb: React.FC<PropType> = props => {
           alt={projectPicture.alt}
           width={projectPicture.width}
           height={projectPicture.height}
-          className='object-cover h-full w-full rounded-xl'
+          crop="fill"
+          className='rounded-xl'
         />
       </button>
     </div>

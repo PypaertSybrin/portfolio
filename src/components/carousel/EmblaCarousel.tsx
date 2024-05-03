@@ -40,7 +40,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
         <div className="embla__container">
           {slides.filter(projects => !projects.inGrid).map((project, index) => (
             <div
-              className="embla__slide embla__class-names flex flex-col relative"
+              className="embla__slide "
               key={project.name}
             >
               <div className="relative">
@@ -49,10 +49,11 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   alt={project.pictures[0].alt}
                   width={project.pictures[0].width}
                   height={project.pictures[0].height}
-                  className="object-cover h-full w-full rounded-xl"
+                  crop="fill"
+                  className="rounded-xl"
                 />
-                <div className={`font-semibold rounded-xl text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
-                <Link href={`/projects/${project.slug}`} className="text-2xl">Read more</Link >
+                <div className={`font-semibold rounded-xl text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden xl:flex'}`}>
+                <Link href={`/projects/${project.slug}`} className="text-2xl text-white">Read more</Link >
                 </div>
               </div>
               <h3 className='text-2xl font-semibold'>{project.name}</h3>

@@ -13,12 +13,6 @@ export const ProjectsData: Project[] = [
         alt: 'TargetGoal',
         width: 1200,
         height: 900,
-      },
-      {
-        src: 'TargetGoal',
-        alt: 'TargetGoal',
-        width: 1200,
-        height: 900,
       }
     ],
   },
@@ -152,8 +146,8 @@ export const ProjectsData: Project[] = [
     ],
   },
   {
-    name: 'Todo website',
-    slug: 'todo-website',
+    name: 'Todo app',
+    slug: 'todo-app',
     subname: 'Frontend Development',
     description: 'This todo app was an excercise we made in Frontend Development. It was one of my first projects made with React. I was really happy with the end result and I\'ve learned a lot from it.',
     inGrid: true,
@@ -165,8 +159,21 @@ export const ProjectsData: Project[] = [
         height: 900
       }
     ]
-
-  }
-  
+  },
+  {
+    name: 'Todo app',
+    slug: 'todo-app',
+    subname: 'Frontend Development',
+    description: 'This todo app was an excercise we made in Frontend Development. It was one of my first projects made with React. I was really happy with the end result and I\'ve learned a lot from it.',
+    inGrid: false,
+    pictures: [
+      {
+        src: 'Todo',
+        alt: 'Todo',
+        width: 1200,
+        height: 900
+      }
+    ]
+  },
 ]
 export default ProjectsData

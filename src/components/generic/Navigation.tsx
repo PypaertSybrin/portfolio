@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Navbar from '@/components/nav/Navbar'
 import Sidebar from '@/components/nav/Sidebar'
 
-const Navigation = ({active}: {active: number}) => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => {
     setIsOpen(!isOpen)
@@ -11,8 +11,8 @@ const Navigation = ({active}: {active: number}) => {
 
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} active={active} />
-      <Navbar isOpen={isOpen} toggle={toggle} active={active} />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar isOpen={isOpen} toggle={toggle} />
     </>
   )
 }

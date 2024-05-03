@@ -23,7 +23,7 @@ const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
           <div className="grid sm:grid-cols-2">
             <div className="px-4">
               {SLIDES.length === 1 ? (
-                <CldImage src={`docs/${project?.pictures[0].src}`} alt={project?.pictures[0].alt!} width={project?.pictures[0].width} height={project?.pictures[0].height} className='w-full rounded-xl'/>
+                <CldImage src={`docs/${project?.pictures[0].src}`} alt={project?.pictures[0].alt!} width={project?.pictures[0].width} height={project?.pictures[0].height} crop='fill' className='rounded-xl'/>
               ) : (
                 <EmblaCarouselProjectDetails
                   slides={SLIDES}

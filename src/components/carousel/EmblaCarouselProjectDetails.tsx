@@ -52,7 +52,8 @@ const EmblaCarouselProjectDetails: React.FC<PropType> = props => {
                 alt={project.alt}
                 width={project.width}
                 height={project.height}
-                className="object-cover h-full w-full rounded-xl"
+                crop="fill"
+                className="rounded-xl"
                 key={project.src}
               />
             ))}
@@ -80,7 +81,8 @@ const EmblaCarouselProjectDetails: React.FC<PropType> = props => {
             alt={project.alt}
             width={project.width}
             height={project.height}
-            className="object-cover h-full w-full rounded-xl"
+            crop="fill"
+            className="rounded-xl"
             key={project.src}
           />
         ))}

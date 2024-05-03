@@ -3,18 +3,10 @@ import Link from 'next/link'
 const Sidebar = ({
   isOpen,
   toggle,
-  active
 }: {
   isOpen: boolean
   toggle: () => void,
-  active: number
 }) => {
-  const activeClass = (index: number) => {
-    if (active === index) {
-      return 'text-primary-neutral'
-    }
-    return ''
-  }
   return (
     <>
       <div
@@ -39,27 +31,27 @@ const Sidebar = ({
 
         <ul className="text-center text-xl">
           <li>
-            <Link className={`${activeClass(0)}`} href="/" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/" onClick={toggle}>
               <p>Home</p>
             </Link>
           </li>
           <li>
-            <Link className={`${activeClass(1)}`} href="/#about" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#about" onClick={toggle}>
               <p>About me</p>
             </Link>
           </li>
           <li>
-            <Link className={`${activeClass(2)}`} href="/#skills" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#skills" onClick={toggle}>
               <p>Skills</p>
             </Link>
           </li>
           <li>
-            <Link className={`${activeClass(3)}`} href="/#projects" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#projects" onClick={toggle}>
               <p>Projects</p>
             </Link>
           </li>
           <li>
-            <Link className={`${activeClass(4)}`} href="/#contact" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#contact" onClick={toggle}>
               <p>Contact</p>
             </Link>
           </li>
