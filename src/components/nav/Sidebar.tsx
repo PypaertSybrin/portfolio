@@ -5,8 +5,8 @@ const Sidebar = ({
   toggle,
 }: {
   isOpen: boolean
-  toggle: () => void
-}): JSX.Element => {
+  toggle: () => void,
+}) => {
   return (
     <>
       <div
@@ -18,8 +18,8 @@ const Sidebar = ({
           {/* Close icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
+            width="32"
+            height="32"
             viewBox="0 0 24 24"
           >
             <path
@@ -29,29 +29,29 @@ const Sidebar = ({
           </svg>
         </button>
 
-        <ul className="text-center text-xl">
+        <ul className="text-center text-xl font-semibold">
           <li>
-            <Link href="/" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/" onClick={toggle}>
               <p>Home</p>
             </Link>
           </li>
           <li>
-            <Link href="/#about" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#about" onClick={toggle}>
               <p>About me</p>
             </Link>
           </li>
           <li>
-            <Link href="/#skills" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#skills" onClick={toggle}>
               <p>Skills</p>
             </Link>
           </li>
           <li>
-            <Link href="/#projects" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#projects" onClick={toggle}>
               <p>Projects</p>
             </Link>
           </li>
           <li>
-            <Link href="/#contact" onClick={toggle}>
+            <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/#contact" onClick={toggle}>
               <p>Contact</p>
             </Link>
           </li>

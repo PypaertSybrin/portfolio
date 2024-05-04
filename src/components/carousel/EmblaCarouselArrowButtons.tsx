@@ -65,7 +65,7 @@ import React, {
   
     return (
       <button
-        className="sm:hidden embla__button embla__button--prev"
+        className="md:hidden embla__button embla__button--prev"
         type="button"
         {...restProps}
       >
@@ -85,7 +85,7 @@ import React, {
   
     return (
       <button
-        className="sm:hidden embla__button embla__button--next"
+        className="md:hidden embla__button embla__button--next"
         type="button"
         {...restProps}
       >

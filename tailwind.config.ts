@@ -14,8 +14,8 @@ const config: Config = {
       },
       colors: {
         primary: {
-          light: '#B7C5FF',
-          neutral: '#91A7FF'
+          neutral: '#728FFF',
+          dark: '#3A61FF'
         },
         secundary: {
           950: '#1F1F1F',
