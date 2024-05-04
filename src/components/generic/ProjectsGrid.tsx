@@ -3,20 +3,16 @@ import ProjectCard from '@/components/cards/ProjectCard'
 
 const ProjectsGrid = () => {
   return (
-    <div className="py-16 px-4">
-      <h1 className="text-4xl lg:text-5xl font-semibold mb-12 text-center">
-        Projects
-      </h1>
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-12">
         <div className="lg:w-2/6 text-center lg:text-left">
-          <p className="text-2xl lg:text-4xl font-semibold mb-8 text-primary-dark dark:text-primary-neutral">
+          <p className="text-xl sm:text-2xl lg:text-4xl font-semibold mb-8 text-primary-dark dark:text-primary-neutral">
             A Journey of Learning and Creation{' '}
           </p>
-          <p className="mb-4 text-lg">
+          <p className="mb-4 sm:text-lg text-sm">
             I&apos;m excited to share a glimpse into some of the projects
             I&apos;ve been involved in.
           </p>
-          <p className="text-lg">
+          <p className="sm:text-lg text-sm">
             {' '}
             Whether flying solo or as part of a team, each one required a lot of
             hard graft and dedication. But you know what? At the end of the day,
@@ -40,7 +36,6 @@ const ProjectsGrid = () => {
           )}
         </div>
       </div>
-    </div>
   )
 }
 

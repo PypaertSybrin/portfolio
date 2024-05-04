@@ -27,6 +27,7 @@ const ProjectCard = ({
             alt={project.pictures[0].alt}
             crop="fill"
             className="rounded-xl"
+            priority={project.pictures[0].src === 'TargetGoal.png' ? true : false}
           />
         </div>
         <div className="self-start order-first">

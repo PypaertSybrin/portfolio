@@ -6,6 +6,7 @@ import Footer from '@/components/generic/Footer'
 import { EmblaOptionsType } from 'embla-carousel'
 import EmblaCarouselProjectDetails from '@/components/carousel/EmblaCarouselProjectDetails'
 import { CldImage } from 'next-cloudinary'
+import RevealComp from '@/components/view/Reveal'
 
 const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
   const project: Project | undefined = ProjectsData.find(
@@ -32,12 +33,14 @@ const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
               )}
             </div>
             <div className="px-4 order-first sm:order-last mb-8 sm:mb-0">
+              <RevealComp threshold={0.7} duration={'800ms'} x={0} y={-20}>
               <h1 className="text-5xl mb-2 font-semibold z-100">
                 {project?.name}
               </h1>
               <p className="text-3xl font-semibold mb-8 text-secundary-800">
                 {project?.subname}
               </p>
+              </RevealComp>
               <p className="text-lg">{project?.description}</p>
             </div>
           </div>

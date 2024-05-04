@@ -29,7 +29,7 @@ const Sidebar = ({
           </svg>
         </button>
 
-        <ul className="text-center text-xl">
+        <ul className="text-center text-xl font-semibold">
           <li>
             <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/" onClick={toggle}>
               <p>Home</p>

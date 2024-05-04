@@ -2,8 +2,8 @@ import Skill from '@/models/Skill'
 
 const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
-    <div className='p-8 dark:bg-secundary-900 bg-neutral-300 h-full rounded-xl'>
-      <div className='w-min dark:bg-secundary-800 bg-secundary-50 p-6 mb-12 rounded-full text-primary-dark dark:text-primary-neutral'>
+    <div className='sm:p-8 p-4 dark:bg-secundary-900 bg-neutral-300 h-full rounded-xl'>
+      <div className='w-min dark:bg-secundary-800 bg-secundary-50 p-6 sm:mb-12 mb-6 rounded-full text-primary-dark dark:text-primary-neutral'>
           <skill.icon
             className='w-8 h-8'
           />

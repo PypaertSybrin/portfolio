@@ -4,10 +4,7 @@ import { LuMail } from 'react-icons/lu'
 
 const Contact = () => {
   return (
-    <div className="py-16 px-4 text-center">
-      <h1 className="text-4xl lg:text-5xl font-semibold mb-4 text-center">
-        Contact
-      </h1>
+    <div className="text-center">
       <p className='mb-4'>Feel free to reach out to me</p>
       <div className="flex justify-center gap-6">
         <Link href="mailto:sybrinpypaert@gmail.com">
