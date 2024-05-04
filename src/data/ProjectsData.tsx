@@ -9,17 +9,11 @@ export const ProjectsData: Project[] = [
     inGrid: true,
     pictures: [
       {
-        src: 'TargetGoal.png',
+        src: 'TargetGoal',
         alt: 'TargetGoal',
         width: 1200,
         height: 900,
-      },
-      {
-        src: 'TargetGoal.png',
-        alt: 'TargetGoal',
-        width: 1200,
-        height: 900,
-      },
+      }
     ],
   },
   {
@@ -30,7 +24,7 @@ export const ProjectsData: Project[] = [
     inGrid: true,
     pictures: [
       {
-        src: 'TastyTrade.png',
+        src: 'TastyTrade',
         alt: 'TastyTrade',
         width: 1200,
         height: 900,
@@ -45,10 +39,52 @@ export const ProjectsData: Project[] = [
     inGrid: true,
     pictures: [
       {
-        src: 'BikeBlitz.png',
+        src: 'BikeBlitz',
         alt: 'BikeBlitz',
         width: 1200,
         height: 900,
+      },
+      {
+        src: 'BikeBlitz-4',
+        alt: 'BikeBlitz-4',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'BikeBlitz-5',
+        alt: 'BikeBlitz-5',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'BikeBlitz-6',
+        alt: 'BikeBlitz-6',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'BikeBlitz-7',
+        alt: 'BikeBlitz-7',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'BikeBlitz-1-new',
+        alt: 'BikeBlit-1',
+        width: 1080,
+        height: 810,
+      },
+      {
+        src: 'BikeBlitz-2-new',
+        alt: 'BikeBlitz-2',
+        width: 1080,
+        height: 810,
+      },
+      {
+        src: 'BikeBlitz-3-new',
+        alt: 'BikeBlitz-3',
+        width: 2271,
+        height: 1703,
       },
     ],
   },
@@ -57,14 +93,20 @@ export const ProjectsData: Project[] = [
     slug: 'free-game-galaxy',
     subname: 'Interaction Design',
     description: 'Free Game Galaxy was a project where I designed and developed a website where you could find a ton of free games to play. I had a lot of fun making this project and was really happy with the outcome.',
-    inGrid: true,
+    inGrid: false,
     pictures: [
       {
-        src: 'FreeGameGalaxy.png',
+        src: 'FreeGameGalaxy',
         alt: 'Free Game Galaxy',
         width: 1200,
         height: 900,
       },
+      {
+        src: 'FreeGameGalaxy-1',
+        alt: 'Free Game Galaxy-1',
+        width: 1200,
+        height: 900,
+      }
     ],
   },
   {
@@ -75,11 +117,17 @@ export const ProjectsData: Project[] = [
     inGrid: false,
     pictures: [
       {
-        src: 'LightSwitch.png',
+        src: 'LightSwitch',
         alt: 'LightSwitch',
         width: 1200,
         height: 900,
       },
+      {
+        src: 'LightSwitch-1',
+        alt: 'LightSwitch-1',
+        width: 1200,
+        height: 900,
+      }
     ],
   },
   {
@@ -90,13 +138,42 @@ export const ProjectsData: Project[] = [
     inGrid: false,
     pictures: [
       {
-        src: 'Backend.png',
+        src: 'Backend',
         alt: 'Backend',
         width: 1200,
         height: 900,
       },
     ],
   },
-  
+  {
+    name: 'Todo app',
+    slug: 'todo-app',
+    subname: 'Frontend Development',
+    description: 'This todo app was an excercise we made in Frontend Development. It was one of my first projects made with React. I was really happy with the end result and I\'ve learned a lot from it.',
+    inGrid: true,
+    pictures: [
+      {
+        src: 'Todo',
+        alt: 'Todo',
+        width: 1200,
+        height: 900
+      }
+    ]
+  },
+  {
+    name: 'Todo app',
+    slug: 'todo-app',
+    subname: 'Frontend Development',
+    description: 'This todo app was an excercise we made in Frontend Development. It was one of my first projects made with React. I was really happy with the end result and I\'ve learned a lot from it.',
+    inGrid: false,
+    pictures: [
+      {
+        src: 'Todo',
+        alt: 'Todo',
+        width: 1200,
+        height: 900
+      }
+    ]
+  },
 ]
 export default ProjectsData

@@ -4,7 +4,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Thumb } from './EmblaCarouselThumbsButton'
 import ProjectPicture from '@/models/ProjectPicture'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 type PropType = {
   slides: ProjectPicture[]
@@ -42,35 +42,50 @@ const EmblaCarouselProjectDetails: React.FC<PropType> = props => {
   }, [emblaMainApi, onSelect])
 
   return (
-    <div className="embla-detail">
-      <div className="embla__viewport" ref={emblaMainRef}>
-        <div className="embla__container-detail">
-          {slides.map(project => (
-            <Image
-              src={`/${project.src}`}
-              alt={project.alt}
-              width={project.width}
-              height={project.height}
-                className="object-cover h-full w-full rounded-xl"
-              key={project.src}
-            ></Image>
-          ))}
-        </div>
-      </div>
-
-      <div className="embla-thumbs">
-        <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
-          <div className="embla-thumbs__container">
-            {slides.map((projectPicture, index) => (
-              <Thumb
-                key={index}
-                onClick={() => onThumbClick(index)}
-                selected={index === selectedIndex}
-                projectPicture={projectPicture}
+    <div>
+      <div className="hidden sm:block embla-detail">
+        <div className="embla__viewport" ref={emblaMainRef}>
+          <div className="embla__container-detail">
+            {slides.map(project => (
+              <CldImage
+                src={`docs/${project.src}`}
+                alt={project.alt}
+                width={project.width}
+                height={project.height}
+                crop="fill"
+                className="rounded-xl"
+                key={project.src}
               />
             ))}
           </div>
         </div>
+        <div className="embla-thumbs">
+          <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
+            <div className="embla-thumbs__container">
+              {slides.map((projectPicture, index) => (
+                <Thumb
+                  key={index}
+                  onClick={() => onThumbClick(index)}
+                  selected={index === selectedIndex}
+                  projectPicture={projectPicture}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="sm:hidden grid gap-8">
+        {slides.map(project => (
+          <CldImage
+            src={`docs/${project.src}`}
+            alt={project.alt}
+            width={project.width}
+            height={project.height}
+            crop="fill"
+            className="rounded-xl"
+            key={project.src}
+          />
+        ))}
       </div>
     </div>
   )

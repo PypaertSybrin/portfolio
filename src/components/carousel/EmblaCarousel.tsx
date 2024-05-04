@@ -12,6 +12,8 @@ import {
 } from './EmblaCarouselArrowButtons'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
+import { CldImage } from 'next-cloudinary'
+import Link from 'next/link'
 
 type PropType = {
   slides: Project[]
@@ -19,7 +21,6 @@ type PropType = {
 }
 
 const EmblaCarousel: React.FC<PropType> = props => {
-  const router = useRouter();
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [ClassNames()])
 
@@ -33,29 +34,26 @@ const EmblaCarousel: React.FC<PropType> = props => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi)
 
-  const handleClick = (slug: string) => () => {
-    router.push(`/projects/${slug}`);
-  }
-
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((project, index) => (
+          {slides.filter(projects => !projects.inGrid).map((project, index) => (
             <div
-              className="embla__slide embla__class-names flex flex-col relative"
+              className="embla__slide "
               key={project.name}
             >
               <div className="relative">
-                <Image
-                  src={`/${project.pictures[0].src}`}
+                <CldImage
+                  src={`docs/${project.pictures[0].src}`}
                   alt={project.pictures[0].alt}
                   width={project.pictures[0].width}
                   height={project.pictures[0].height}
-                  className="object-cover h-full w-full rounded-xl"
-                ></Image>
-                <div className={`font-semibold rounded-xl text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden'}`}>
-                  <button onClick={handleClick(project.slug)} className="text-2xl">Read more</button >
+                  crop="fill"
+                  className="rounded-xl"
+                />
+                <div className={`font-semibold rounded-xl text-lg absolute inset-0 flex flex-col justify-center text-center bg-black hover:bg-opacity-70 bg-opacity-0 opacity-0 hover:opacity-100 transition duration-300 ${index === selectedIndex ? '' : 'hidden xl:flex'}`}>
+                <Link href={`/projects/${project.slug}`} className="text-2xl text-white">Read more</Link >
                 </div>
               </div>
               <h3 className='text-2xl font-semibold'>{project.name}</h3>
