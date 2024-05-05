@@ -182,10 +182,10 @@ export const ProjectsData: Project[] = [
     ],
   },
   {
-    name: 'Portofolio',
-    slug: 'portofolio',
+    name: 'Portfolio',
+    slug: 'portfolio',
     subname: 'Frontend Development',
-    description: 'This is my portofolio website. It was a project I made to showcase my projects and skills. It\'s made with Next.js and Tailwind CSS. I am really happy with how it turned out.',
+    description: 'This is my portfolio website. It was a project I made to showcase my projects and skills. It\'s made with Next.js and Tailwind CSS. I am really happy with how it turned out.',
     inGrid: true,
     pictures: [
       {
