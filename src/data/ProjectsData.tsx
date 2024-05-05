@@ -24,8 +24,38 @@ export const ProjectsData: Project[] = [
     inGrid: true,
     pictures: [
       {
-        src: 'TastyTrade',
-        alt: 'TastyTrade',
+        src: 'TastyTrade-login',
+        alt: 'TastyTrade-login',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'TastyTrade-1',
+        alt: 'TastyTrade-1',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'TastyTrade-2',
+        alt: 'TastyTrade-2',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'TastyTrade-3',
+        alt: 'TastyTrade-3',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'TastyTrade-4',
+        alt: 'TastyTrade-4',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'TastyTrade-5',
+        alt: 'TastyTrade-5',
         width: 1200,
         height: 900,
       },
@@ -138,23 +168,35 @@ export const ProjectsData: Project[] = [
     inGrid: false,
     pictures: [
       {
-        src: 'Backend',
-        alt: 'Backend',
+        src: 'Backend-blazor',
+        alt: 'Backend-blazor',
+        width: 1200,
+        height: 900,
+      },
+      {
+        src: 'Backend-swagger',
+        alt: 'Backend-swagger',
         width: 1200,
         height: 900,
       },
     ],
   },
   {
-    name: 'Todo app',
-    slug: 'todo-app',
+    name: 'Portofolio',
+    slug: 'portofolio',
     subname: 'Frontend Development',
-    description: 'This todo app was an excercise we made in Frontend Development. It was one of my first projects made with React. I was really happy with the end result and I\'ve learned a lot from it.',
+    description: 'This is my portofolio website. It was a project I made to showcase my projects and skills. It\'s made with Next.js and Tailwind CSS. I am really happy with how it turned out.',
     inGrid: true,
     pictures: [
       {
-        src: 'Todo',
-        alt: 'Todo',
+        src: 'Portofolio-dark',
+        alt: 'Portofolio-dark',
+        width: 1200,
+        height: 900
+      },
+      {
+        src: 'Portofolio-light',
+        alt: 'Portofolio-light',
         width: 1200,
         height: 900
       }
