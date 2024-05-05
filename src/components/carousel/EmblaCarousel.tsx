@@ -57,7 +57,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
                 </div>
               </div>
               <h3 className='text-2xl font-semibold'>{project.name}</h3>
-              <p className='text-secundary-800 font-semibold'>{project.subname}</p>
+              <p className='dark:text-secundary-400 text-secundary-800 font-semibold text-lg'>{project.subname}</p>
             </div>
           ))}
         </div>

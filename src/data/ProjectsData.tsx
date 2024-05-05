@@ -98,12 +98,12 @@ export const ProjectsData: Project[] = [
         width: 1200,
         height: 900,
       },
-      {
-        src: 'BikeBlitz-1-new',
-        alt: 'BikeBlit-1',
-        width: 1080,
-        height: 810,
-      },
+      // {
+      //   src: 'BikeBlitz-1-new',
+      //   alt: 'BikeBlit-1',
+      //   width: 1080,
+      //   height: 810,
+      // },
       {
         src: 'BikeBlitz-2-new',
         alt: 'BikeBlitz-2',
