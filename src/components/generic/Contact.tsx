@@ -7,7 +7,7 @@ const Contact = () => {
     <div className="text-center">
       <p className='mb-4'>Feel free to reach out to me</p>
       <div className="flex justify-center gap-6">
-        <Link href="mailto:sybrinpypaert@gmail.com">
+        <Link href="mailto:sybrin.pypaert@student.howest.be">
           <div className="dark:bg-secundary-900 bg-neutral-300 p-4 rounded-xl">
             <LuMail className="w-8 h-8" />
           </div>

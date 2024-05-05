@@ -32,7 +32,7 @@ const Header = () => {
         </p>
         <div className="flex items-center gap-4 lg:gap-8 pt-4 lg:pt-10 pb-2 justify-center lg:justify-start">
           <Link
-            href="mailto:sybrinpypaert@gmail.com"
+            href="mailto:sybrin.pypaert@student.howest.be"
             className="bg-primary-dark dark:bg-primary-neutral text-white dark:text-secundary-950 py-2 px-4 md:py-4 md:px-8 rounded-lg"
           >
             Contact me

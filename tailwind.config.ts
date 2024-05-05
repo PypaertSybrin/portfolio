@@ -21,7 +21,10 @@ const config: Config = {
           950: '#1F1F1F',
           900: '#2F2F2F',
           800: '#3F3F3F',
+          700: '#4F4F4F',
 
+          400: '#AFAFAF',
+          300: '#BFBFBF',
           200: '#CFCFCF',
           100: '#DFDFDF',
           50: '#EFEFEF'

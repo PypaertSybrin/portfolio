@@ -10,7 +10,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
       </div>
       <p className='text-2xl mb-2 font-semibold'>{skill.name}</p>
       <div className='items-start'>
-        <p className='py-2'>Strengths</p>
+        <p className='py-2 dark:text-secundary-200 text-secundary-900'>Strengths</p>
         <ul className='flex flex-wrap gap-2 items-center'>
           {skill.strength.map(s => (
             <div

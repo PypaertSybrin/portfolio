@@ -37,7 +37,7 @@ const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
               <h1 className="text-5xl mb-2 font-semibold z-100">
                 {project?.name}
               </h1>
-              <p className="text-3xl font-semibold mb-8 text-secundary-800">
+              <p className="text-3xl font-semibold mb-8 dark:text-secundary-400 text-secundary-800">
                 {project?.subname}
               </p>
               </RevealComp>
