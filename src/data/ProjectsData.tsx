@@ -17,11 +17,38 @@ export const ProjectsData: Project[] = [
     ],
   },
   {
+    name: 'Kids-BESTest app',
+    slug: 'kids-bestest',
+    subname: 'Industry Project',
+    description: '...',
+    inGrid: true,
+    pictures: [
+      {
+        src: 'Kids-BESTest',
+        alt: 'Kids-BESTest',
+        width: 900,
+        height: 675,
+      },
+      {
+        src: 'Kids-BESTest-login',
+        alt: 'Kids-BESTest-login',
+        width: 900,
+        height: 675,
+      },
+      {
+        src: 'Kids-BESTest-examination',
+        alt: 'Kids-BESTest-examination',
+        width: 900,
+        height: 675,
+      },
+    ]
+  },
+  {
     name: 'TastyTrade',
     slug: 'tasty-trade',
     subname: 'Smart App Development',
     description: 'TastyTrade was a mobile app I made with Flutter. The app was a recipe app where you could find a lot of recipes others made. You could also add your own recipes and share them with others. It was a fun project and I learned a lot more about Flutter while making it.',
-    inGrid: true,
+    inGrid: false,
     pictures: [
       {
         src: 'TastyTrade-login',
