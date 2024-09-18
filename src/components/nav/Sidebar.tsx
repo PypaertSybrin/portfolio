@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { LuDownload } from 'react-icons/lu'
 
 const Sidebar = ({
   isOpen,
@@ -12,9 +13,9 @@ const Sidebar = ({
       <div
         className={`${
           isOpen ? 'opacity-100 top-0' : 'opacity-0 top-[-100%]'
-        } fixed w-full h-full overflow-hidden justify-center dark:bg-secundary-950 bg-secundary-50 grid pt-[120px] left-0 z-10`}
+        } fixed w-full h-full overflow-hidden dark:bg-secundary-950 bg-secundary-50 grid justify-center z-10`}
       >
-        <button className="absolute right-0 p-5" onClick={toggle}>
+        <button className="absolute right-0 top-0 p-5" onClick={toggle}>
           {/* Close icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +30,7 @@ const Sidebar = ({
           </svg>
         </button>
 
-        <ul className="text-center text-xl font-semibold">
+        <ul className="text-center text-xl font-semibold flex flex-col justify-center h-full gap-4">
           <li>
             <Link className='hover:text-primary-dark dark:hover:text-primary-neutral' href="/" onClick={toggle}>
               <p>Home</p>
