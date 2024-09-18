@@ -6,7 +6,7 @@ export const ProjectsData: Project[] = [
     slug: 'target-goal',
     subname: 'Project one',
     description:
-      "This was one of my first projects. It's called Target Goal and the aim of the game was to hit the ball in the goal where the lights were lit up. It was quite a challenging project with some ups and downs, but looking at the final result, I was really happy with the outcome.",
+      'This was one of my first projects. It\’s called Target Goal, and the aim of the game was to hit the ball into the goal where the lights were lit up. The main components used were a Raspberry Pi (to direct everything), LED strips (to indicate where to shoot), and piezo sensors (to measure where the person shot the ball). It was quite a challenging project with some ups and downs, but looking at the final result, I was really happy with the outcome.',
     inGrid: true,
     pictures: [
       {
@@ -50,7 +50,7 @@ export const ProjectsData: Project[] = [
     slug: 'tasty-trade',
     subname: 'Smart App Development',
     description:
-      'TastyTrade was a mobile app I made with Flutter. The app was a recipe app where you could find a lot of recipes others made. You could also add your own recipes and share them with others. It was a fun project and I learned a lot more about Flutter while making it.',
+      'TastyTrade was a mobile app I made with Flutter and Firebase. The app was a recipe app where you could find a lot of recipes others made. You could also add your own recipes and share them with others. It was a fun project and I learned a lot more about Flutter while making it.',
     inGrid: false,
     pictures: [
       {
@@ -96,7 +96,7 @@ export const ProjectsData: Project[] = [
     slug: 'bike-blitz',
     subname: 'Team Project',
     description:
-      'Bike Blitz was my first project within a team. It was a great experience and we had a lot of fun making it. The game was to race against each other and the aim was to be the first to reach the finish line. It was a great experience and I learned a lot from it.',
+      'My first group project involved creating a racing game where two players competed against each other on stationary bikes, aiming to reach the finish line as quickly as possible. The game was playable through our website, and the data from the bikes was gathered via a Bluetooth connection.',
     inGrid: true,
     pictures: [
       {
@@ -198,7 +198,7 @@ export const ProjectsData: Project[] = [
     slug: 'formula1-api',
     subname: 'Backend Development',
     description:
-      'My Formula1 Api was a project for backend development. We needed to create an API with a lot of features we saw in the lessons like security, validation, logging, testing etc. It was a great project and I learned a lot from it.',
+      'My Formula 1 API was a project developed in .NET. We needed to create an API with features we covered in lessons, such as security, validation, logging, and testing. It was a great project, and I learned a lot from it.',
     inGrid: false,
     pictures: [
       {
@@ -220,7 +220,7 @@ export const ProjectsData: Project[] = [
     slug: 'portfolio',
     subname: 'Frontend Development',
     description:
-      "This is my portfolio website. It was a project I made to showcase my projects and skills. It's made with Next.js and Tailwind CSS. I am really happy with how it turned out.",
+      "This is my portfolio website created with Next.js and Tailwind CSS. I built it to showcase my projects and skills I made during my studies.",
     inGrid: true,
     pictures: [
       {
@@ -242,7 +242,7 @@ export const ProjectsData: Project[] = [
     slug: 'todo-app',
     subname: 'Frontend Development',
     description:
-      "This todo app was an excercise we made in Frontend Development. It was one of my first projects made with React. I was really happy with the end result and I've learned a lot from it.",
+      "This todo app was an excercise we made in Frontend Development. It was one of my first projects built with React.",
     inGrid: false,
     pictures: [
       {
