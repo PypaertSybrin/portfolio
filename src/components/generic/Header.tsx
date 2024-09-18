@@ -2,8 +2,19 @@
 import Link from 'next/link'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 import { CldImage } from 'next-cloudinary'
+import { LuDownload, LuMail } from 'react-icons/lu'
 
 const Header = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/docs/SybrinPypaert-CV.pdf';
+    link.setAttribute('download', 'SybrinPypaert-CV.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="h-screen flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between lg:gap-16">
       <div className="lg:p-8 p-2 text-center lg:text-left text-xl">
@@ -31,14 +42,24 @@ const Header = () => {
           in Belgium.
         </p>
         <div className="flex items-center gap-4 lg:gap-8 pt-4 lg:pt-10 pb-2 justify-center lg:justify-start">
-          <Link
+          {/* <Link
             href="mailto:sybrin.pypaert@student.howest.be"
             className="bg-primary-dark dark:bg-primary-neutral text-white dark:text-secundary-950 py-2 px-4 md:py-4 md:px-8 rounded-lg"
           >
             Contact me
+          </Link> */}
+          <Link
+            className="bg-primary-dark dark:bg-primary-neutral flex items-center gap-2 px-4 py-2 md:py-4 md:px-8 rounded-lg text-white dark:text-secundary-950 font-semibold"
+            href="#" onClick={handleDownload}
+          >
+            <LuDownload className='w-6 h-6' />
+            <p>Resume</p>
+          </Link>
+          <Link href="mailto:sybrin.pypaert@student.howest.be">
+            <LuMail className="w-8 h-8" />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/sybrin-pypaert-a2413b298/"
+            href="https://www.linkedin.com/in/sybrin-pypaert/"
             target="_blank"
           >
             <SiLinkedin className="w-8 h-8" />

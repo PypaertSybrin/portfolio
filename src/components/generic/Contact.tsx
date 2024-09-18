@@ -13,7 +13,7 @@ const Contact = () => {
           </div>
         </Link>
         <Link
-          href="https://www.linkedin.com/in/sybrin-pypaert-a2413b298/"
+          href="https://www.linkedin.com/in/sybrin-pypaert/"
           target="_blank"
         >
           <div className="dark:bg-secundary-900 bg-neutral-300 p-4 rounded-xl">

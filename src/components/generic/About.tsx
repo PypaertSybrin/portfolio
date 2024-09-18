@@ -18,16 +18,6 @@ const About = () => {
       <div className="flex flex-col gap-4 lg:w-full">
         <div className="dark:bg-secundary-900 bg-neutral-300 p-4 rounded-xl">
           <h2 className="text-2xl font-semibold text-primary-dark dark:text-primary-neutral">
-            Sports
-          </h2>
-          <p className='text-sm sm:text-base'>
-            I love doing sports and keeping myself fit and healthy. I&apos;ve
-            played football for most of my life, but now I often go for a run to
-            stay fit.
-          </p>
-        </div>
-        <div className="dark:bg-secundary-900 bg-neutral-300 p-4 rounded-xl">
-          <h2 className="text-2xl font-semibold text-primary-dark dark:text-primary-neutral">
             Eager to learn
           </h2>
           <p className='text-sm sm:text-base'>
@@ -43,6 +33,16 @@ const About = () => {
           <p className='text-sm sm:text-base'>
             I am a team player and I love working with others because I can
             learn a lot from them and they from me.
+          </p>
+        </div>
+        <div className="dark:bg-secundary-900 bg-neutral-300 p-4 rounded-xl">
+          <h2 className="text-2xl font-semibold text-primary-dark dark:text-primary-neutral">
+            Sports
+          </h2>
+          <p className='text-sm sm:text-base'>
+            I love doing sports and keeping myself fit and healthy. I&apos;ve
+            played football for most of my life, but now I often go for a run to
+            stay fit.
           </p>
         </div>
       </div>
