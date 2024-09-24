@@ -7,6 +7,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 import EmblaCarouselProjectDetails from '@/components/carousel/EmblaCarouselProjectDetails'
 import { CldImage } from 'next-cloudinary'
 import RevealComp from '@/components/view/Reveal'
+import { SiFlutter, SiFirebase } from 'react-icons/si'
 
 const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
   const project: Project | undefined = ProjectsData.find(
@@ -20,11 +21,18 @@ const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
     <div className="min-h-screen dark:bg-secundary-950 dark:text-secundary-50 bg-secundary-50 text-secundary-950">
       <div className="max-w-screen-xl mx-auto">
         <Navigation />
-        <div className="sm:h-screen h-auto grid place-items-center pt-16 sm:pt-0">
+        <div className="sm:h-screen h-auto pt-16 sm:pt-0 grid place-items-center">
           <div className="grid sm:grid-cols-2">
             <div className="px-4">
               {SLIDES.length === 1 ? (
-                <CldImage src={`docs/${project?.pictures[0].src}`} alt={project?.pictures[0].alt!} width={project?.pictures[0].width} height={project?.pictures[0].height} crop='fill' className='rounded-xl'/>
+                <CldImage
+                  src={`docs/${project?.pictures[0].src}`}
+                  alt={project?.pictures[0].alt!}
+                  width={project?.pictures[0].width}
+                  height={project?.pictures[0].height}
+                  crop="fill"
+                  className="rounded-xl"
+                />
               ) : (
                 <EmblaCarouselProjectDetails
                   slides={SLIDES}
@@ -34,19 +42,19 @@ const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
             </div>
             <div className="px-4 order-first sm:order-last mb-8 sm:mb-0">
               <RevealComp threshold={0.7} duration={'800ms'} x={0} y={-20}>
-              <h1 className="text-5xl mb-2 font-semibold z-100">
-                {project?.name}
-              </h1>
-              <p className="text-3xl font-semibold mb-8 dark:text-secundary-400 text-secundary-800">
-                {project?.subname}
-              </p>
+                <h1 className="text-5xl mb-2 font-semibold z-100">
+                  {project?.name}
+                </h1>
+                <p className="text-3xl font-semibold dark:text-secundary-400 text-secundary-800 mb-8">
+                  {project?.subname}
+                </p>
               </RevealComp>
               <p className="text-lg">{project?.description}</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="sm:absolute bottom-0 left-0 right-0">
+      <div className="sm:absolute bottom-0 left-0 right-0 z-10 bg-secundary-950">
         <Footer />
       </div>
     </div>
