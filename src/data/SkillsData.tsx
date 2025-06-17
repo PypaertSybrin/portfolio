@@ -42,6 +42,7 @@ export const SkillData: Skill[] = [
     strength: [
       { icon: SiFlutter, name: 'Flutter', color: '#02569b' },
       { icon: SiFirebase, name: 'Firebase', color: '#ffca28' },
+      { icon: SiReact, name: 'React Native', color: '#61dafb' },
     ],
   },
 ];
