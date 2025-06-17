@@ -57,7 +57,7 @@ const Header = () => {
         transition={{ duration: 0.8 }}
       >
         <h1 className="lg:text-5xl md:text-3xl text-xl font-bold md:pb-4">
-          Hello, I'm{' '}
+          Hello, I&apos;m{' '}
           <span className="text-primary-dark dark:text-primary-neutral">
             {currentText}
           </span>
