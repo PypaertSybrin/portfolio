@@ -91,7 +91,7 @@ const Header = () => {
             <LuDownload className="md:w-6 md:h-6 w-4 h-4" />
             <p className="md:text-xl">Resume</p>
           </Link>
-          <Link href="mailto:sybrin.pypaert@student.howest.be">
+          <Link href="mailto:sybrinpypaert@gmail.com">
             <LuMail className="w-8 h-8" />
           </Link>
           <Link href="https://www.linkedin.com/in/sybrin-pypaert/" target="_blank">
