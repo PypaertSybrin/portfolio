@@ -1,3 +1,4 @@
+'use client'
 import { SkillData } from '@/data/SkillsData'
 import SkillCard from '@/components/cards/SkillCard'
 
