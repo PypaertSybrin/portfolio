@@ -11,6 +11,7 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
+  SiVuedotjs,
 } from 'react-icons/si';
 import { LuMonitor, LuSmartphone, LuDatabase } from 'react-icons/lu';
 
@@ -24,6 +25,7 @@ export const SkillData: Skill[] = [
       { icon: SiReact, name: 'React', color: '#61dafb' },
       { icon: SiTailwindcss, name: 'Tailwindcss', color: '#06b6d4' },
       { icon: SiNextdotjs, name: 'Next.js', color: '#000000' }, // Black color
+      { icon: SiVuedotjs, name: 'Vue.js', color: '#4fc08d' },
     ],
   },
   {
