@@ -8,10 +8,16 @@ import EmblaCarouselProjectDetails from '@/components/carousel/EmblaCarouselProj
 import { CldImage } from 'next-cloudinary'
 import RevealComp from '@/components/view/Reveal'
 import { SiFlutter, SiFirebase } from 'react-icons/si'
+import { use } from 'react'
 
-const ProjectPage = ({ params }: { params: { projectSlug: string } }) => {
+const ProjectPage = ({
+  params,
+}: {
+  params: Promise<{ projectSlug: string }>
+}) => {
+  const { projectSlug } = use(params)
   const project: Project | undefined = ProjectsData.find(
-    (project: Project) => project.slug === params.projectSlug,
+    (project: Project) => project.slug === projectSlug,
   )
 
   const OPTIONS: EmblaOptionsType = {}
