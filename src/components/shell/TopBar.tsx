@@ -20,26 +20,73 @@ const TopBar = () => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Scroll spy. Only the sections that exist on this page are observed, so the
-  // same bar works unchanged on project detail pages.
+  /**
+   * Scroll spy for the active section.
+   *
+   * Deliberately computed from scroll position rather than with an
+   * IntersectionObserver. The observer version only updated when an
+   * intersection *changed*, so it could sit on a stale section after a
+   * deep link, a restored scroll position, or a programmatic jump — and it
+   * had a dead zone over #stack, which has no nav entry of its own.
+   * Recomputing is cheap for six elements and is always right.
+   *
+   * Sections that don't exist on this page are skipped, so the same bar
+   * works unchanged on project detail pages.
+   */
   useEffect(() => {
-    const sections = navItems
-      .map(item => document.getElementById(item.id))
-      .filter((el): el is HTMLElement => Boolean(el))
+    // #stack sits between work and contact and reads as part of the work
+    // section, so it lights the same nav item rather than nothing.
+    const spyIds = [...navItems.map(item => item.id), 'stack']
+    const readsAs: Record<string, string> = { stack: 'work' }
+
+    const sections = spyIds
+      .map(id => ({ id, el: document.getElementById(id) }))
+      .filter((s): s is { id: string; el: HTMLElement } => Boolean(s.el))
+      // Document order, so the last match below is the one we're inside.
+      .sort((a, b) => a.el.getBoundingClientRect().top - b.el.getBoundingClientRect().top)
+
     if (sections.length === 0) return
 
-    const observer = new IntersectionObserver(
-      entries => {
-        const visible = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-        if (visible[0]) setActiveId(visible[0].target.id)
-      },
-      { rootMargin: '-20% 0px -65% 0px', threshold: 0 },
-    )
+    let frame = 0
 
-    sections.forEach(section => observer.observe(section))
-    return () => observer.disconnect()
+    const measure = () => {
+      frame = 0
+      // Treat a line ~30% down the viewport as "what you're reading".
+      const readingLine = window.scrollY + window.innerHeight * 0.3
+      let current: string | null = null
+
+      for (const section of sections) {
+        const top = section.el.getBoundingClientRect().top + window.scrollY
+        if (top <= readingLine) current = readsAs[section.id] ?? section.id
+      }
+
+      // The very bottom of the page always belongs to the last section,
+      // otherwise the footer leaves the nav lit on whatever came before.
+      const atBottom =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 2
+      if (atBottom) current = navItems[navItems.length - 1].id
+
+      setActiveId(current)
+    }
+
+    const schedule = () => {
+      if (frame) return
+      frame = requestAnimationFrame(measure)
+    }
+
+    measure()
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule)
+    // Background tabs stop running rAF, so re-measure on the way back in.
+    document.addEventListener('visibilitychange', measure)
+
+    return () => {
+      if (frame) cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+      document.removeEventListener('visibilitychange', measure)
+    }
   }, [])
 
   const openPalette = () => window.dispatchEvent(new Event(OPEN_PALETTE_EVENT))
