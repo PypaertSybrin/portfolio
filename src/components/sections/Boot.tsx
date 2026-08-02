@@ -5,18 +5,12 @@ import { LuArrowDown, LuDownload, LuMail } from 'react-icons/lu'
 import TypeLine from '@/components/ui/TypeLine'
 import Reveal from '@/components/ui/Reveal'
 import { site } from '@/data/SiteData'
-import ProjectsData from '@/data/ProjectsData'
-
-const readout = [
-  { key: 'ROLE', value: `${site.role} @ ${site.company}` },
-  { key: 'BASE', value: site.base },
-  { key: 'SINCE', value: '2020 — secondary school IT, then MCT, now product' },
-  { key: 'OUTPUT', value: `${ProjectsData.length} projects shipped and documented` },
-]
 
 const Boot = () => (
   <section id="whoami" className="relative pt-28 sm:pt-36">
-    <div className="grid items-start gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+    {/* Centred on wide screens: with the intro trimmed, the text column is
+        much shorter than the portrait and top-aligning left a dead gap. */}
+    <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-16">
       {/* --- Left: the statement ------------------------------------- */}
       <div>
         <Reveal className="flex items-baseline gap-2 text-sm">
@@ -37,15 +31,13 @@ const Boot = () => (
         </h1>
 
         <Reveal delay={160}>
-          <p className="mt-7 max-w-xl font-sans text-base leading-relaxed text-dim sm:text-lg text-pretty">
-            I&apos;m a full-stack developer at{' '}
+          <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-dim text-pretty">
+            Full-stack developer at{' '}
             <Link href={site.companyHref} target="_blank" className="tlink">
               OnTracx
             </Link>
-            , a Ghent University spin-off making wearables that keep runners
-            from getting injured. Before that: three years of Multimedia &amp;
-            Creative Technology at Howest — and a stack of projects that each
-            started in something I didn&apos;t know how to use yet.
+            . Every project here started in something I didn&apos;t know how to
+            use yet.
           </p>
         </Reveal>
 
@@ -139,24 +131,9 @@ const Boot = () => (
       </Reveal>
     </div>
 
-    {/* --- Readout strip ---------------------------------------------- */}
-    <Reveal delay={200} className="mt-12 sm:mt-16">
-      <dl className="grid gap-px border border-line bg-line sm:grid-cols-2">
-        {readout.map(row => (
-          <div
-            key={row.key}
-            className="flex flex-wrap items-baseline gap-x-3 gap-y-1 bg-panel px-4 py-3"
-          >
-            <dt className="label w-14 shrink-0">{row.key}</dt>
-            <dd className="text-xs text-dim sm:text-sm">{row.value}</dd>
-          </div>
-        ))}
-      </dl>
-    </Reveal>
-
     <Reveal
       delay={320}
-      className="mt-10 flex items-center gap-2 text-[11px] text-faint sm:mt-14"
+      className="mt-12 flex items-center gap-2 text-[11px] text-faint sm:mt-16"
     >
       <LuArrowDown className="h-3.5 w-3.5 animate-bounce" aria-hidden />
       <span>scroll, or hit</span>

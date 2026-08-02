@@ -48,7 +48,7 @@ const Journey = () => (
             </div>
 
             {/* --- Commit body --------------------------------------- */}
-            <div className={isLast ? 'pb-2' : 'pb-14 sm:pb-16'}>
+            <div className={isLast ? 'pb-2' : 'pb-12 sm:pb-14'}>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="text-xs text-faint">{chapter.hash}</span>
                 <span className="text-xs text-dim">{chapter.date}</span>
@@ -88,32 +88,14 @@ const Journey = () => (
                 <span className="text-faint">{chapter.span}</span>
               </p>
 
-              <p className="mt-5 max-w-2xl font-sans text-lg leading-snug text-phosphor/90 text-balance">
-                {chapter.lede}
+              <p className="mt-4 max-w-2xl font-sans leading-relaxed text-dim text-pretty">
+                {chapter.description}
               </p>
-
-              <p className="mt-3 max-w-2xl font-sans leading-relaxed text-dim text-pretty">
-                {chapter.body}
-              </p>
-
-              <ul className="mt-6 space-y-2">
-                {chapter.highlights.map(highlight => (
-                  <li
-                    key={highlight}
-                    className="flex gap-3 font-sans text-sm text-dim"
-                  >
-                    <span className="mt-[3px] shrink-0 text-phosphor-dim" aria-hidden>
-                      ▸
-                    </span>
-                    <span className="text-pretty">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
 
               {chapter.projects.length > 0 && (
-                <div className="mt-6">
+                <div className="mt-5">
                   <p className="label mb-2.5">
-                    {chapter.projects.length} commits from this chapter
+                    {chapter.projects.length} projects from this chapter
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {chapter.projects.map(slug => (
