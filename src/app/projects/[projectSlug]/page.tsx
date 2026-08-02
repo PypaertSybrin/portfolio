@@ -70,7 +70,7 @@ export default async function ProjectPage({
       {/* --- Title ------------------------------------------------------ */}
       <header className="mt-8 border-b border-line pb-10">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
-          <span className="text-signal">{project.hash}</span>
+          <span className="text-faint">{project.hash}</span>
           {project.featured && (
             <span className="border border-phosphor/40 bg-phosphor/10 px-2 py-0.5 text-[10px] text-phosphor">
               pinned

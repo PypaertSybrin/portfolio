@@ -35,8 +35,8 @@ const Method = () => (
   <section id="method" className="pt-24 sm:pt-32">
     <SectionHead
       command="cat ~/method.md"
-      tag="how i work"
-      note="the short version"
+      title="How I work"
+      subtitle="Every project on this site started in something I didn't know how to use yet. That isn't an accident — it's the method."
     />
 
     {/* --- The thesis --------------------------------------------------- */}
@@ -64,7 +64,10 @@ const Method = () => (
     {/* --- The loop, as a shell pipeline -------------------------------- */}
     <Reveal delay={140} className="mt-14">
       <div className="pane p-5 sm:p-7">
-        <p className="label mb-5">the loop</p>
+        <h3 className="font-sans text-lg text-fg">The loop</h3>
+        <p className="mb-6 mt-1 font-sans text-sm text-dim">
+          How something I can&apos;t build turns into something I can.
+        </p>
         <ol className="space-y-4">
           {pipeline.map((step, index) => (
             <li key={step.cmd} className="flex flex-wrap items-baseline gap-x-3">
@@ -94,7 +97,15 @@ const Method = () => (
     </Reveal>
 
     {/* --- The receipts ------------------------------------------------- */}
-    <Reveal delay={180} className="mt-6">
+    <Reveal delay={180} className="mt-12">
+      <h3 className="font-sans text-xl leading-tight text-fg sm:text-2xl">
+        What each project taught me
+      </h3>
+      <p className="mb-5 mt-2 max-w-2xl font-sans text-sm text-dim text-pretty">
+        Every build below lists the one thing I hadn&apos;t done before
+        starting it. That list is the honest version of a CV.
+      </p>
+
       <div className="pane">
         <div className="flex flex-wrap items-baseline gap-x-2 border-b border-line px-5 py-3 text-xs sm:text-sm">
           <span className="text-phosphor select-none" aria-hidden>

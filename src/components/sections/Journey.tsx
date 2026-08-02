@@ -17,8 +17,8 @@ const Journey = () => (
   <section id="journey" className="pt-24 sm:pt-32">
     <SectionHead
       command="git log --graph --decorate"
-      tag="journey"
-      note="school → school → work, newest first"
+      title="Journey"
+      subtitle="Where I've studied and worked, most recent first — from picking IT in secondary school to building product at OnTracx."
     />
 
     <ol className="max-w-4xl">
@@ -50,7 +50,7 @@ const Journey = () => (
             {/* --- Commit body --------------------------------------- */}
             <div className={isLast ? 'pb-2' : 'pb-14 sm:pb-16'}>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                <span className="text-xs text-signal">{chapter.hash}</span>
+                <span className="text-xs text-faint">{chapter.hash}</span>
                 <span className="text-xs text-dim">{chapter.date}</span>
                 {chapter.refs.map(ref => (
                   <span

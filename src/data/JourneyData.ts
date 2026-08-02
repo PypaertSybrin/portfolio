@@ -22,11 +22,10 @@ export interface JourneyChapter {
 /** Newest first — rendered top-down like `git log`. */
 export const JourneyData: JourneyChapter[] = [
   {
-    hash: 'HEAD',
-    refs: [
-      { label: 'HEAD -> main', tone: 'head' },
-      { label: 'origin/main', tone: 'branch' },
-    ],
+    hash: 'f0c3d1',
+    // Ref labels are picked to read correctly twice: valid-looking git
+    // decorations to a developer, plain English to everyone else.
+    refs: [{ label: 'HEAD -> now', tone: 'head' }],
     date: '2025-09',
     span: 'Sept 2025 — now',
     title: 'Full-stack Developer',
@@ -46,7 +45,7 @@ export const JourneyData: JourneyChapter[] = [
   },
   {
     hash: 'd41b8e',
-    refs: [{ label: 'tag: bachelor', tone: 'tag' }],
+    refs: [{ label: 'graduated', tone: 'tag' }],
     date: '2022-09',
     span: 'Sept 2022 — June 2025',
     title: 'Multimedia & Creative Technology',
@@ -75,7 +74,7 @@ export const JourneyData: JourneyChapter[] = [
   },
   {
     hash: '8c02a1',
-    refs: [{ label: 'tag: first-commit', tone: 'tag' }],
+    refs: [{ label: 'where it started', tone: 'tag' }],
     date: '2020-09',
     span: '2020 — June 2022',
     title: 'IT Management',

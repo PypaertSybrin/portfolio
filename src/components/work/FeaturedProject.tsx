@@ -21,7 +21,7 @@ const FeaturedProject = ({
     <Reveal as="li" className="pane group relative">
       {/* --- Meta bar ------------------------------------------------- */}
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-line px-4 py-2.5 text-[11px] sm:px-5">
-        <span className="text-signal">{project.hash}</span>
+        <span className="text-faint">{project.hash}</span>
         <span className="text-dim">{project.year}</span>
         <span className="text-faint" aria-hidden>
           ·

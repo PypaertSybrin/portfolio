@@ -38,7 +38,11 @@ const channels = [
 
 const Contact = () => (
   <section id="contact" className="pt-24 sm:pt-32">
-    <SectionHead command={`mail ${site.handle}`} tag="contact" />
+    <SectionHead
+      command={`mail ${site.handle}`}
+      title="Get in touch"
+      subtitle="The fastest ways to reach me."
+    />
 
     <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
       <Reveal>

@@ -10,8 +10,8 @@ const Stack = () => (
   <section id="stack" className="pt-24 sm:pt-32">
     <SectionHead
       command="cat package.json"
-      tag="stack"
-      note="the appendix, not the argument"
+      title="Tools"
+      subtitle="The technologies I've actually shipped with. It's a short list on purpose — the projects above are the real answer."
     />
 
     <div className="grid gap-8 lg:grid-cols-[1fr_20rem] lg:gap-12">

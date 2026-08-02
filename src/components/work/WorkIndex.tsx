@@ -91,7 +91,7 @@ const WorkIndex = () => {
                     isActive ? 'bg-raised' : 'hover:bg-raised/60'
                   }`}
                 >
-                  <span className="hidden shrink-0 text-xs text-signal sm:inline">
+                  <span className="hidden shrink-0 text-xs text-faint sm:inline">
                     {project.hash}
                   </span>
 

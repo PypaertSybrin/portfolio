@@ -28,12 +28,14 @@ const StatusBar = () => {
   return (
     <div className="fixed bottom-0 inset-x-0 z-40 h-7 border-t border-line bg-panel/95 backdrop-blur-sm">
       <div className="mx-auto flex h-full max-w-shell items-center gap-3 px-4 text-[10px] sm:px-6">
-        <span className="bg-phosphor px-2 py-[3px] font-semibold uppercase tracking-[0.14em] text-ink">
+        {/* Chrome, not information — kept as texture rather than shouted, so
+            it doesn't outrank anything a visitor actually needs to read. */}
+        <span className="border border-phosphor-dim/40 px-2 py-[2px] uppercase tracking-[0.14em] text-phosphor-dim">
           normal
         </span>
         <span className="text-dim">~/portfolio</span>
         <span className="hidden text-faint sm:inline">·</span>
-        <span className="hidden text-phosphor-dim sm:inline">⌥ main</span>
+        <span className="hidden text-faint sm:inline">main</span>
 
         <span className="leader" />
 
