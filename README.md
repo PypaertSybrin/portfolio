@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# sybrinpypaert.be
 
-## Getting Started
+Personal portfolio for Sybrin Pypaert — full-stack developer at OnTracx.
 
-First, run the development server:
+The site is built around one argument: **I learn by building.** Everything on
+the page is evidence for it. Projects are the main content; the stack list is
+an appendix.
+
+## Design
+
+A terminal / build-log identity. Monospace chrome, phosphor-green accent on
+near-black, sections introduced as shell commands. Dark only — a terminal that
+turns white is not a terminal.
+
+| Section   | Command                      | Does                                                  |
+| --------- | ---------------------------- | ----------------------------------------------------- |
+| `whoami`  | `whoami`                     | Hero, thesis, portrait                                 |
+| `method`  | `cat ~/method.md`            | How I work + a `grep` of every project's "first time"  |
+| `journey` | `git log --graph --decorate` | Secondary school → Howest → OnTracx as a commit graph  |
+| `work`    | `ls ~/projects`              | 3 pinned case studies, then the full hover-preview log |
+| `stack`   | `cat package.json`           | Deliberately small                                     |
+| `contact` | `mail sybrin`                | Channels                                               |
+
+Press <kbd>⌘</kbd><kbd>K</kbd> anywhere for the command palette (sections,
+every project, outbound links).
+
+## Editing content
+
+All copy lives in `src/data/` — no component edits needed for content changes.
+
+- `ProjectsData.tsx` — the work log. Order is reading order (newest first).
+  `featured: true` promotes a project to a pinned case study. `firstTime` is
+  the load-bearing field: it feeds the `grep` block in the method section and
+  the callout on every project page, so every project needs a real one.
+- `JourneyData.ts` — the three chapters of the commit graph. `projects` holds
+  slugs that link back into the work log.
+- `SiteData.ts` — name, role, links, and the stack appendix.
+- `NavData.ts` — section list for the top bar and the palette.
+
+Project images are Cloudinary public IDs under `docs/` (see
+`next.config.mjs` for the cloud name). A project with an empty `pictures`
+array renders fine — the index falls back to an ASCII placeholder.
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # static export of every project page
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Stack: Next.js 15 (App Router), TypeScript, Tailwind CSS, framer-motion-free
+CSS transitions, Embla for the project galleries, Cloudinary for images.
