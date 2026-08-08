@@ -11,7 +11,7 @@ const Work = () => (
     <SectionHead
       command="ls ~/projects"
       title="Selected work"
-      subtitle={`${ProjectsData.length} projects across hardware, mobile, backend, web and AI. Some were briefs, some were mine — each one says what it was and what it took.`}
+      subtitle={`${ProjectsData.length} projects across hardware, mobile, backend, web and AI. Some were briefs, some were mine. Each one says what it was and what it took.`}
     />
 
     <Reveal className="mb-4 flex items-baseline gap-2">

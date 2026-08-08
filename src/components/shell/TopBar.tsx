@@ -26,7 +26,7 @@ const TopBar = () => {
    * Deliberately computed from scroll position rather than with an
    * IntersectionObserver. The observer version only updated when an
    * intersection *changed*, so it could sit on a stale section after a
-   * deep link, a restored scroll position, or a programmatic jump — and it
+   * deep link, a restored scroll position, or a programmatic jump, and it
    * had a dead zone over #stack, which has no nav entry of its own.
    * Recomputing is cheap for six elements and is always right.
    *

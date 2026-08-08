@@ -3,7 +3,7 @@ import Reveal from '@/components/ui/Reveal'
 interface SectionHeadProps {
   /** The shell command that introduces the section. Flavour, not the heading. */
   command: string
-  /** Plain-language section title — the thing people actually navigate by. */
+  /** Plain-language section title. The thing people actually navigate by. */
   title: string
   /** One line saying what this section is, in plain English. */
   subtitle: string

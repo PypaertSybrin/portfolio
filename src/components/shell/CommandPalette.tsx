@@ -185,7 +185,7 @@ const CommandPalette = () => {
         <ul ref={listRef} className="max-h-[52vh] overflow-y-auto py-2">
           {results.length === 0 && (
             <li className="px-4 py-6 text-center text-xs text-faint">
-              no matches — try &quot;flutter&quot;, &quot;iot&quot;, &quot;journey&quot;
+              no matches. try &quot;flutter&quot;, &quot;iot&quot;, &quot;journey&quot;
             </li>
           )}
           {results.map((entry, index) => {

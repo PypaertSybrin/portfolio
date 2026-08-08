@@ -11,7 +11,7 @@ const StatusBar = () => {
   const [clock, setClock] = useState<string | null>(null)
 
   useEffect(() => {
-    // Rendered client-side only — a server-rendered clock would hydrate wrong.
+    // Rendered client-side only, since a server-rendered clock hydrates wrong.
     const tick = () =>
       setClock(
         new Date().toLocaleTimeString('en-GB', {
@@ -28,7 +28,7 @@ const StatusBar = () => {
   return (
     <div className="fixed bottom-0 inset-x-0 z-40 h-7 border-t border-line bg-panel/95 backdrop-blur-sm">
       <div className="mx-auto flex h-full max-w-shell items-center gap-3 px-4 text-[10px] sm:px-6">
-        {/* Chrome, not information — kept as texture rather than shouted, so
+        {/* Chrome, not information. Kept as texture rather than shouted, so
             it doesn't outrank anything a visitor actually needs to read. */}
         <span className="border border-phosphor-dim/40 px-2 py-[2px] uppercase tracking-[0.14em] text-phosphor-dim">
           normal

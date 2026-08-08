@@ -10,7 +10,7 @@ const Colophon = () => (
       <span className="text-dim">exit</span>
     </div>
     <p className="mt-2 text-xs text-faint">
-      logout — connection to pypaert.be closed.
+      logout. connection to pypaert.be closed.
     </p>
 
     <div className="mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-2 text-[11px] text-faint">

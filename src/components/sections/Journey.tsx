@@ -18,7 +18,7 @@ const Journey = () => (
     <SectionHead
       command="git log --graph --decorate"
       title="Journey"
-      subtitle="Where I've studied and worked, most recent first — from picking IT in secondary school to building product at OnTracx."
+      subtitle="Where I've studied and worked, most recent first, from picking IT in secondary school to building product at OnTracx."
     />
 
     <ol className="max-w-4xl">

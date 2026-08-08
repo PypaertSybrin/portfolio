@@ -11,7 +11,7 @@ const Stack = () => (
     <SectionHead
       command="cat package.json"
       title="Tools"
-      subtitle="The technologies I've actually shipped with. It's a short list on purpose — the projects above are the real answer."
+      subtitle="The technologies I've actually shipped with. It's a short list on purpose. The projects above are the real answer."
     />
 
     <div className="grid gap-8 lg:grid-cols-[1fr_20rem] lg:gap-12">
@@ -51,7 +51,7 @@ const Stack = () => (
       <Reveal delay={80} className="flex flex-col justify-center">
         <p className="font-sans leading-relaxed text-dim text-pretty">
           This list is a side effect, not a goal. None of it was learned in the
-          abstract — each entry got added because a project needed it, and the
+          abstract. Each entry got added because a project needed it, and the
           next one will get added the same way.
         </p>
         <p className="mt-4 font-sans leading-relaxed text-dim text-pretty">

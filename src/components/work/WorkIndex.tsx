@@ -16,7 +16,7 @@ const tracks: { value: ProjectTrack | 'all'; label: string }[] = [
 
 /**
  * The complete log. Rows on the left, a sticky preview on the right that
- * follows whatever row you're pointing at — so you can scan the whole body of
+ * follows whatever row you're pointing at, so you can scan the whole body of
  * work without a single page load.
  */
 const WorkIndex = () => {
@@ -162,7 +162,7 @@ const WorkIndex = () => {
                         {`  ┌───────────────┐
   │               │
   │   no capture  │
-  │   — read the  │
+  │   read the    │
   │   write-up    │
   │               │
   └───────────────┘`}

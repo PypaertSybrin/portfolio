@@ -14,7 +14,7 @@ export const site = {
 
 /**
  * Deliberately compact. The site argues through projects, not through a wall
- * of logos — this is here so the question "what has he actually used" has an
+ * of logos. This is here so the question "what has he actually used" has an
  * answer, and nothing more.
  */
 export const stackGroups: { label: string; items: string[] }[] = [

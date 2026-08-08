@@ -10,8 +10,8 @@ export interface JourneyChapter {
   orgHref?: string
   place: string
   /**
-   * The whole chapter, in one or two sentences. Kept deliberately short —
-   * the work log below is where the detail belongs.
+   * The whole chapter, in one or two sentences. Kept deliberately short,
+   * because the work log below is where the detail belongs.
    */
   description: string
   /** Slugs from ProjectsData that came out of this chapter. */
@@ -19,7 +19,7 @@ export interface JourneyChapter {
   current?: boolean
 }
 
-/** Newest first — rendered top-down like `git log`. */
+/** Newest first, rendered top-down like `git log`. */
 export const JourneyData: JourneyChapter[] = [
   {
     hash: 'f0c3d1',
@@ -27,13 +27,13 @@ export const JourneyData: JourneyChapter[] = [
     // decorations to a developer, plain English to everyone else.
     refs: [{ label: 'HEAD -> now', tone: 'head' }],
     date: '2025-09',
-    span: 'Sept 2025 — now',
+    span: 'Sept 2025 - now',
     title: 'Full-stack Developer',
     org: 'OnTracx',
     orgHref: 'https://www.ontracx.com',
     place: 'Belgium',
     description:
-      'Building software that keeps runners from getting injured — a wearable sensor, and the platform that turns its data into something a coach or physio can act on. My first codebase that has to keep working after I stop looking at it.',
+      'Building software that keeps runners from getting injured: a wearable sensor, and the platform that turns its data into something a coach or physio can act on. My first codebase that has to keep working after I stop looking at it.',
     projects: [],
     current: true,
   },
@@ -41,13 +41,13 @@ export const JourneyData: JourneyChapter[] = [
     hash: 'd41b8e',
     refs: [{ label: 'graduated', tone: 'tag' }],
     date: '2022-09',
-    span: 'Sept 2022 — June 2025',
+    span: 'Sept 2022 - June 2025',
     title: 'Multimedia & Creative Technology',
     org: 'Howest',
     orgHref: 'https://www.howest.be/nl',
     place: 'Kortrijk',
     description:
-      'Three years taught almost entirely through projects — web, mobile, IoT, backend, AI. Nearly everything in the work log came out of it, and most of it started in a stack I had never touched.',
+      'Three years taught almost entirely through projects: web, mobile, IoT, backend, AI. Nearly everything in the work log came out of it, and most of it started in a stack I had never touched.',
     projects: [
       'kids-bestest',
       'voice-recipe-assistant',
@@ -64,7 +64,7 @@ export const JourneyData: JourneyChapter[] = [
     hash: '8c02a1',
     refs: [{ label: 'where it started', tone: 'tag' }],
     date: '2020-09',
-    span: '2020 — June 2022',
+    span: '2020 - June 2022',
     title: 'IT Management',
     org: 'Sint-Paulusschool, Campus College',
     place: 'Waregem',

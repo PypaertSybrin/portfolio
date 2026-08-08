@@ -1,7 +1,7 @@
 import Project from '@/models/Project'
 
 /**
- * Ordered newest first — the work index renders this as a commit log, so the
+ * Ordered newest first. The work index renders this as a commit log, so the
  * array order is the reading order.
  */
 export const ProjectsData: Project[] = [
@@ -17,7 +17,7 @@ export const ProjectsData: Project[] = [
     stack: ['Flutter', 'Dart', 'Firebase'],
     firstTime: 'Building for real clinicians, with their protocol as the spec',
     description:
-      'We built an app in collaboration with Hasselt University for occupational therapists and physiotherapists. The goal was to digitise a clinical test battery that was still being scored on paper — so the app had to follow the protocol exactly, stay fast enough to use mid-session with a child in the room, and keep the results safe. We built it in Flutter so it ran on both Android and iOS from one codebase, and used Firebase for auth and storage.',
+      'We built an app in collaboration with Hasselt University for occupational therapists and physiotherapists. The goal was to digitise a clinical test battery that was still being scored on paper, so the app had to follow the protocol exactly, stay fast enough to use mid-session with a child in the room, and keep the results safe. We built it in Flutter so it ran on both Android and iOS from one codebase, and used Firebase for auth and storage.',
     learned: [
       'A domain expert is the real spec. Most of the hard work was translating a clinical protocol into screens, not writing Dart.',
       'Offline-tolerant data entry matters more than a pretty UI when someone is scoring a test in real time.',
@@ -47,7 +47,7 @@ export const ProjectsData: Project[] = [
     stack: ['Speech-to-text', 'LLM API', 'Python'],
     firstTime: 'Speech-to-text pipelines and prompting an LLM as a component',
     description:
-      'A research project exploring voice as the primary input for a cooking app: you say what is in your fridge, and it comes back with recipes you can actually make. The interesting part was not the model — it was everything around it. Transcription is noisy, people list ingredients in messy ways, and a language model will happily invent a recipe that calls for something you never mentioned. Most of the work went into constraining and validating the output.',
+      'A research project exploring voice as the primary input for a cooking app: you say what is in your fridge, and it comes back with recipes you can actually make. The interesting part was not the model. It was everything around it. Transcription is noisy, people list ingredients in messy ways, and a language model will happily invent a recipe that calls for something you never mentioned. Most of the work went into constraining and validating the output.',
     learned: [
       'An LLM is a component with failure modes, not a magic box. You design around it.',
       'Voice input forces you to handle ambiguity up front instead of validating a form.',
@@ -60,7 +60,7 @@ export const ProjectsData: Project[] = [
     hash: 'c118af',
     name: 'Portfolio',
     slug: 'portfolio',
-    summary: 'This site — rebuilt from scratch whenever I outgrow it',
+    summary: 'This site, rebuilt from scratch whenever I outgrow it',
     context: 'Personal',
     year: 2024,
     role: 'Solo',
@@ -68,7 +68,7 @@ export const ProjectsData: Project[] = [
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     firstTime: 'The App Router, and treating my own work as a product',
     description:
-      'My portfolio, built with Next.js and Tailwind. It has been rewritten more than once — every time my work changes shape, the site stops fitting and gets rebuilt. That is sort of the point: it is the one project where I am both the client and the developer, so it is where I try things before I use them anywhere serious.',
+      'My portfolio, built with Next.js and Tailwind. It has been rewritten more than once. Every time my work changes shape, the site stops fitting and gets rebuilt. That is sort of the point: it is the one project where I am both the client and the developer, so it is where I try things before I use them anywhere serious.',
     learned: [
       'Designing for yourself is harder than designing to a brief.',
       'Content structure comes first. Every rewrite started because the data model no longer matched the story.',
@@ -94,7 +94,7 @@ export const ProjectsData: Project[] = [
     stack: ['Web Bluetooth', 'JavaScript', 'Realtime sockets'],
     firstTime: 'Reading live hardware data in a browser, and working in a team',
     description:
-      'My first real group project: a racing game where two players compete on stationary bikes to reach the finish line first. The game ran in the browser and pulled live data off the bikes over Bluetooth. Getting a physical pedal stroke to turn into a smooth on-screen position — without jitter, without one rider drifting ahead because of a dropped packet — was the whole challenge.',
+      'My first real group project: a racing game where two players compete on stationary bikes to reach the finish line first. The game ran in the browser and pulled live data off the bikes over Bluetooth. Getting a physical pedal stroke to turn into a smooth on-screen position, without jitter and without one rider drifting ahead because of a dropped packet, was the whole challenge.',
     learned: [
       'Real sensor data is never as clean as the demo. Smoothing and dead-reckoning are not optional.',
       'Latency is a design problem, not just a technical one.',
@@ -123,7 +123,7 @@ export const ProjectsData: Project[] = [
     stack: ['Flutter', 'Dart', 'Firebase'],
     firstTime: 'Flutter, and modelling user-generated content',
     description:
-      'A mobile app built with Flutter and Firebase where you can browse recipes other people have made, add your own, and share them. It was the project where Flutter went from "a framework I have read about" to something I could actually build in — I picked it specifically because I did not know it yet.',
+      'A mobile app built with Flutter and Firebase where you can browse recipes other people have made, add your own, and share them. It was the project where Flutter went from "a framework I have read about" to something I could actually build in. I picked it specifically because I did not know it yet.',
     learned: [
       'Widget composition clicks once you stop fighting it and start nesting.',
       'User-generated content means moderation, empty states and bad data are part of v1, not v2.',
@@ -174,7 +174,7 @@ export const ProjectsData: Project[] = [
     stack: ['Raspberry Pi', 'Python', 'LED strips', 'Piezo sensors'],
     firstTime: 'Wiring hardware and writing the software that reads it',
     description:
-      'One of my first projects, and still one of my favourites. A goal lights up a target with LED strips, and piezo sensors pick up where the ball actually hit — so the game can tell whether you scored the shot it asked for. A Raspberry Pi ran the whole thing. Plenty went wrong along the way: sensor thresholds, false hits from vibration, LEDs that would not address cleanly. Getting it to work end to end taught me more than any lesson could have.',
+      'One of my first projects, and still one of my favourites. A goal lights up a target with LED strips, and piezo sensors pick up where the ball actually hit, so the game can tell whether you scored the shot it asked for. A Raspberry Pi ran the whole thing. Plenty went wrong along the way: sensor thresholds, false hits from vibration, LEDs that would not address cleanly. Getting it to work end to end taught me more than any lesson could have.',
     learned: [
       'Physical systems fail in ways software does not. A loose wire looks exactly like a logic bug.',
       'You calibrate against reality, not against the datasheet.',
@@ -197,7 +197,7 @@ export const ProjectsData: Project[] = [
     stack: ['HTML', 'CSS', 'JavaScript'],
     firstTime: 'Designing the thing properly before writing a line of it',
     description:
-      'A site for finding free games to play, where the assignment was as much about the design process as the code — wireframes, visual direction, then implementation. It was the first project where I did not start in the editor.',
+      'A site for finding free games to play, where the assignment was as much about the design process as the code: wireframes, visual direction, then implementation. It was the first project where I did not start in the editor.',
     learned: [
       'Deciding the layout on paper is faster than discovering it in CSS.',
       'A clear visual hierarchy does more for usability than any interaction trick.',
@@ -243,7 +243,7 @@ export const ProjectsData: Project[] = [
     stack: ['React', 'JavaScript'],
     firstTime: 'React, components and state',
     description:
-      'Everyone builds one. Mine was the exercise where React stopped being syntax and started being a mental model — components, props, state, and why re-rendering works the way it does.',
+      'Everyone builds one. Mine was the exercise where React stopped being syntax and started being a mental model: components, props, state, and why re-rendering works the way it does.',
     learned: [
       'Thinking in components is a different habit from thinking in pages.',
       'You do not understand state until you have put it in the wrong place once.',

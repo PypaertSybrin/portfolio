@@ -9,7 +9,7 @@ export interface ProjectLink {
 }
 
 interface Project {
-  /** Short hex id. Cosmetic — it makes the index read like a real commit log. */
+  /** Short hex id. Cosmetic: it makes the index read like a real commit log. */
   hash: string
   name: string
   slug: string

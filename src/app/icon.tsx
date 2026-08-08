@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 export const size = { width: 32, height: 32 }
 export const contentType = 'image/png'
 
-/** Phosphor initials on terminal ink — the mark for the whole rebrand. */
+/** Phosphor initials on terminal ink, the mark for the whole rebrand. */
 export default function Icon() {
   return new ImageResponse(
     (

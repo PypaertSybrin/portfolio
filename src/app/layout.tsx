@@ -21,11 +21,11 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sybrinpypaert.be'),
   title: {
-    default: `${site.name} — ${site.role}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} | ${site.role}`,
+    template: `%s | ${site.name}`,
   },
   description:
-    'Full-stack developer at OnTracx. I learn by building — a log of the projects that taught me each stack, from a sensor-wired football goal to a clinical test app.',
+    'Full-stack developer at OnTracx. I learn by building. A log of the projects that taught me each stack, from a sensor-wired football goal to a clinical test app.',
   keywords: [
     'Sybrin Pypaert',
     'full-stack developer',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: site.name }],
   openGraph: {
-    title: `${site.name} — ${site.role}`,
+    title: `${site.name} | ${site.role}`,
     description:
       'I learn by building. A log of the projects that taught me each stack.',
     url: '/',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${site.name} — ${site.role}`,
+    title: `${site.name} | ${site.role}`,
     description: 'I learn by building.',
   },
 }
