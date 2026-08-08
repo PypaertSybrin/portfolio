@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    'Full-stack developer at OnTracx. I learn by building. A log of the projects that taught me each stack, from a sensor-wired football goal to a clinical test app.',
+    'Full-stack developer at OnTracx. A log of the projects that taught me each stack, from a sensor-wired football goal to a clinical test app.',
   keywords: [
     'Sybrin Pypaert',
     'full-stack developer',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${site.name} | ${site.role}`,
     description:
-      'I learn by building. A log of the projects that taught me each stack.',
+      'Full-stack developer at OnTracx. A log of the projects that taught me each stack.',
     url: '/',
     siteName: site.name,
     locale: 'en_GB',
@@ -48,7 +48,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} | ${site.role}`,
-    description: 'I learn by building.',
+    description:
+      'Full-stack developer at OnTracx. A log of the projects that taught me each stack.',
   },
 }
 
