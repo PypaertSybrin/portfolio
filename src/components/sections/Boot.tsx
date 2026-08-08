@@ -39,8 +39,8 @@ const Boot = () => (
 
         <Reveal delay={200}>
           <p className="mt-4 max-w-lg font-sans text-base leading-relaxed text-dim text-pretty">
-            When I want to learn something new, I build something with it and
-            learn along the way.
+            I love learning new technologies and expanding my logic through
+            building something from 0 and learning along the way.
           </p>
         </Reveal>
 
