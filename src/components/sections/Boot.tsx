@@ -20,14 +20,10 @@ const Boot = () => (
           <span className="text-dim">whoami</span>
         </Reveal>
 
-        <Reveal delay={80}>
-          <p className="mt-6 text-xs uppercase tracking-[0.34em] text-dim sm:text-sm">
-            {site.name}
-          </p>
-        </Reveal>
-
-        <h1 className="mt-3 text-[2.6rem] font-semibold leading-[1.04] tracking-tight text-fg sm:text-6xl lg:text-[4.4rem]">
-          <TypeLine text={site.thesis} speed={62} />
+        {/* `whoami` prints your name. Making that the H1 is both the correct
+            shell output and the right thing for a recruiter to read first. */}
+        <h1 className="mt-6 text-[2.6rem] font-semibold leading-[1.04] tracking-tight text-fg sm:text-6xl lg:text-[4.4rem]">
+          <TypeLine text={site.name} speed={62} />
         </h1>
 
         <Reveal delay={160}>
@@ -36,8 +32,16 @@ const Boot = () => (
             <Link href={site.companyHref} target="_blank" className="tlink">
               OnTracx
             </Link>
-            . Every project here started in something I didn&apos;t know how to
-            use yet.
+            , building software that keeps runners from getting injured — a
+            wearable sensor, and the platform that turns its data into something
+            a coach or physio can act on.
+          </p>
+        </Reveal>
+
+        <Reveal delay={200}>
+          <p className="mt-4 max-w-lg font-sans text-base leading-relaxed text-dim text-pretty">
+            I like learning things I can&apos;t do yet, and the way I do that is
+            by building something that needs them.
           </p>
         </Reveal>
 

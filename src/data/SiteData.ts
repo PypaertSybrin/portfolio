@@ -10,7 +10,6 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/sybrin-pypaert/',
   cv: '/docs/SybrinPypaert-CV.pdf',
   portrait: 'docs/Home',
-  thesis: 'I learn by building.',
 } as const
 
 /**
