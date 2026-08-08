@@ -131,9 +131,22 @@ const Boot = () => (
       </Reveal>
     </div>
 
+    {/* --- The one number worth putting up front -------------------- */}
+    <Reveal delay={320} className="mt-12 sm:mt-16">
+      <dl className="pane inline-flex items-baseline gap-3 px-5 py-4">
+        <dt className="sr-only">years since the first line of code</dt>
+        <dd className="flex items-baseline gap-3">
+          <span className="text-3xl text-phosphor sm:text-4xl">6</span>
+          <span className="text-xs text-dim">
+            years since the first line of code
+          </span>
+        </dd>
+      </dl>
+    </Reveal>
+
     <Reveal
-      delay={320}
-      className="mt-12 flex items-center gap-2 text-[11px] text-faint sm:mt-16"
+      delay={380}
+      className="mt-10 flex items-center gap-2 text-[11px] text-faint sm:mt-12"
     >
       <LuArrowDown className="h-3.5 w-3.5 animate-bounce" aria-hidden />
       <span>scroll, or hit</span>
