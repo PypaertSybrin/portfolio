@@ -12,8 +12,8 @@ A terminal / build-log identity. Monospace chrome, phosphor-green accent on
 near-black, sections introduced as shell commands. Dark only, because a
 terminal that turns white is not a terminal.
 
-| Section   | Command                      | Does                                                  |
-| --------- | ---------------------------- | ----------------------------------------------------- |
+| Section   | Command                      | Does                                                   |
+| --------- | ---------------------------- | ------------------------------------------------------ |
 | `whoami`  | `whoami`                     | Hero, intro, portrait, years-coding counter            |
 | `journey` | `git log --graph --decorate` | Secondary school → Howest → OnTracx as a commit graph  |
 | `work`    | `ls ~/projects`              | 3 pinned case studies, then the full hover-preview log |
@@ -33,7 +33,9 @@ All copy lives in `src/data/`. No component edits needed for content changes.
   and the callout on every project page, so every project needs a real one.
 - `JourneyData.ts`: the three chapters of the commit graph. `projects` holds
   slugs that link back into the work log.
-- `SiteData.ts`: name, role, links, and the stack appendix.
+- `SiteData.ts`: name, role, links, portrait.
+- `StackData.ts`: the tools appendix, grouped frontend / backend / mobile.
+  Group labels render as the keys of the `package.json` block.
 - `NavData.ts`: section list for the top bar and the palette.
 
 Project images are Cloudinary public IDs under `docs/` (see

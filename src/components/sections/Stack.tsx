@@ -1,6 +1,6 @@
 import SectionHead from '@/components/shell/SectionHead'
 import Reveal from '@/components/ui/Reveal'
-import { stackGroups } from '@/data/SiteData'
+import { stackGroups } from '@/data/StackData'
 
 /**
  * Deliberately small and deliberately last. The projects above are the
@@ -50,13 +50,8 @@ const Stack = () => (
 
       <Reveal delay={80} className="flex flex-col justify-center">
         <p className="font-sans leading-relaxed text-dim text-pretty">
-          This list is a side effect, not a goal. None of it was learned in the
-          abstract. Each entry got added because a project needed it, and the
-          next one will get added the same way.
-        </p>
-        <p className="mt-4 font-sans leading-relaxed text-dim text-pretty">
-          If your stack isn&apos;t on here, that&apos;s not a problem.
-          It&apos;s just the next thing.
+          If your stack isn&apos;t on this list, that&apos;s not a problem.
+          It&apos;s just the next one.
         </p>
       </Reveal>
     </div>
