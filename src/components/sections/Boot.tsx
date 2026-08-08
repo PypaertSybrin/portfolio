@@ -27,21 +27,20 @@ const Boot = () => (
         </h1>
 
         <Reveal delay={160}>
-          <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-dim text-pretty">
+          {/* The one fact worth scanning, so it sits brighter than the rest. */}
+          <p className="mt-6 max-w-lg font-sans text-lg leading-relaxed text-fg text-pretty">
             Full-stack developer at{' '}
             <Link href={site.companyHref} target="_blank" className="tlink">
               OnTracx
             </Link>
-            , building software that keeps runners from getting injured — a
-            wearable sensor, and the platform that turns its data into something
-            a coach or physio can act on.
+            .
           </p>
         </Reveal>
 
         <Reveal delay={200}>
           <p className="mt-4 max-w-lg font-sans text-base leading-relaxed text-dim text-pretty">
-            I like learning things I can&apos;t do yet, and the way I do that is
-            by building something that needs them.
+            When I want to learn something new, I build something with it and
+            learn along the way.
           </p>
         </Reveal>
 
