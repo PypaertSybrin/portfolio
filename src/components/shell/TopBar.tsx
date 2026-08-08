@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { navItems, OPEN_PALETTE_EVENT } from '@/data/NavData'
 import { site } from '@/data/SiteData'
@@ -12,6 +13,7 @@ const TopBar = () => {
   const [activeId, setActiveId] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -32,6 +34,11 @@ const TopBar = () => {
    *
    * Sections that don't exist on this page are skipped, so the same bar
    * works unchanged on project detail pages.
+   *
+   * Keyed on the pathname because this bar lives in the root layout and
+   * survives client-side navigation. Without that, the element references
+   * below would still point at the previous page's nodes after a visit to a
+   * project and back, and measuring detached nodes lights the wrong item.
    */
   useEffect(() => {
     // #stack sits between work and contact and reads as part of the work
@@ -45,7 +52,11 @@ const TopBar = () => {
       // Document order, so the last match below is the one we're inside.
       .sort((a, b) => a.el.getBoundingClientRect().top - b.el.getBoundingClientRect().top)
 
-    if (sections.length === 0) return
+    if (sections.length === 0) {
+      // A project page has none of them, so nothing should stay lit.
+      setActiveId(null)
+      return
+    }
 
     let frame = 0
 
@@ -76,6 +87,10 @@ const TopBar = () => {
     }
 
     measure()
+    // Arriving back on the page, the browser restores scroll position after
+    // this effect runs, so the first reading is taken from the wrong offset.
+    // A second pass on the next frame catches where we actually landed.
+    schedule()
     window.addEventListener('scroll', schedule, { passive: true })
     window.addEventListener('resize', schedule)
     // Background tabs stop running rAF, so re-measure on the way back in.
@@ -87,7 +102,7 @@ const TopBar = () => {
       window.removeEventListener('resize', schedule)
       document.removeEventListener('visibilitychange', measure)
     }
-  }, [])
+  }, [pathname])
 
   const openPalette = () => window.dispatchEvent(new Event(OPEN_PALETTE_EVENT))
 
